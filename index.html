@@ -1,0 +1,1776 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="TOEFL">
+<meta name="description" content="新制托福 iBT 2026 每日訓練站">
+<meta name="robots" content="noindex,nofollow">
+<style>
+:root{color-scheme:light dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif}
+img{max-width:100%}
+[hidden]:not([hidden=until-found i]){display:none!important}
+</style>
+</head>
+<body>
+<title>TOEFL 每日訓練</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F2F4F7;--surface:#FFFFFF;--surface2:#F7F9FB;--ink:#171D26;--muted:#626D7A;--line:#D9DEE5;
+  --accent:#1F5FBF;--accent-ink:#FFFFFF;--accent-soft:#E4EDFA;
+  --good:#257A4E;--good-soft:#E3F3EA;--warn:#A9691A;--warn-soft:#FBF0DD;--bad:#B93B3B;--bad-soft:#FBE5E5;
+  --mark-miss:#FBE5E5;--mark-extra:#FBF0DD;
+  --shadow:0 1px 2px rgba(23,29,38,.06),0 4px 14px rgba(23,29,38,.05);
+  --r:10px;
+  --display:"Sora","Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --body:"IBM Plex Sans","Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1318;--surface:#161D25;--surface2:#1C242E;--ink:#E4E9EE;--muted:#8E9AA6;--line:#2A343F;
+    --accent:#6FA8F0;--accent-ink:#0E1318;--accent-soft:#1B2C44;
+    --good:#5CC48A;--good-soft:#173324;--warn:#E0A84E;--warn-soft:#3A2B12;--bad:#EF7777;--bad-soft:#3E1B1B;
+    --mark-miss:#4A2222;--mark-extra:#4A3A16;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1318;--surface:#161D25;--surface2:#1C242E;--ink:#E4E9EE;--muted:#8E9AA6;--line:#2A343F;
+  --accent:#6FA8F0;--accent-ink:#0E1318;--accent-soft:#1B2C44;
+  --good:#5CC48A;--good-soft:#173324;--warn:#E0A84E;--warn-soft:#3A2B12;--bad:#EF7777;--bad-soft:#3E1B1B;
+  --mark-miss:#4A2222;--mark-extra:#4A3A16;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+h1{font-size:1.5rem;font-weight:700}
+h2{font-size:1.15rem;font-weight:600}
+h3{font-size:.95rem;font-weight:600}
+p{margin:0}
+a{color:var(--accent)}
+button{font:inherit;cursor:pointer}
+input,textarea,select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+input:focus,textarea:focus,select:focus,button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+textarea{width:100%;min-height:180px;resize:vertical;line-height:1.6}
+
+.app{display:grid;grid-template-columns:230px 1fr;min-height:100%}
+.app>*{min-width:0}
+.rail{min-width:0;background:var(--surface);border-right:1px solid var(--line);padding:20px 14px;position:sticky;top:env(safe-area-inset-top,0px);height:100vh;overflow:auto}
+.brand{font-family:var(--display);font-weight:700;font-size:1.05rem;padding:4px 8px 14px;letter-spacing:.01em}
+.brand small{display:block;font-family:var(--mono);font-weight:400;font-size:.72rem;color:var(--muted);margin-top:3px}
+.nav{display:flex;flex-direction:column;gap:2px}
+.nav .grp{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:12px 8px 4px}
+.nav button{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;text-align:left;background:none;border:0;border-radius:8px;padding:8px 10px;color:var(--ink);font-size:.9rem}
+.nav button:hover{background:var(--surface2)}
+.nav button.on{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.nav button .dot{width:8px;height:8px;border-radius:50%;background:var(--line);flex:none}
+.nav button .dot.done{background:var(--good)}
+.main{min-width:0;overflow-x:hidden;padding-block:24px 60px;padding-inline:clamp(16px,4vw,40px);max-width:960px;width:100%}
+.page{display:none}.page.on{display:block}
+.head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:18px}
+.head .sub{color:var(--muted);font-size:.9rem;margin-top:4px;max-width:65ch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;box-shadow:var(--shadow)}
+.stack{display:flex;flex-direction:column;gap:14px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:14px}
+.btn{background:var(--accent);color:var(--accent-ink);border:0;border-radius:8px;padding:9px 16px;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.btn:disabled{opacity:.5;cursor:default}
+.btn.ghost{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.btn.sm{padding:6px 11px;font-size:.85rem}
+.btn.danger{background:var(--bad);color:#fff}
+.pill{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:2px 10px;font-size:.78rem;font-weight:600;background:var(--surface2);color:var(--muted);border:1px solid var(--line)}
+.pill.good{background:var(--good-soft);color:var(--good);border-color:transparent}
+.pill.warn{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.pill.bad{background:var(--bad-soft);color:var(--bad);border-color:transparent}
+.pill.acc{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.timer{font-family:var(--mono);font-size:1.6rem;font-weight:500;font-variant-numeric:tabular-nums;min-width:4.5ch;text-align:right}
+.timer.low{color:var(--bad)}
+.muted{color:var(--muted)}
+.small{font-size:.85rem}
+.note{font-size:.85rem;color:var(--muted);background:var(--surface2);border-left:3px solid var(--line);padding:8px 12px;border-radius:0 8px 8px 0}
+.note.warnnote{border-left-color:var(--warn);color:var(--ink)}
+.status{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:8px;min-height:22px}
+.spin{width:14px;height:14px;border:2px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;flex:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation:none}}
+
+/* dashboard */
+.daystrip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.stat .k{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.stat .v{font-family:var(--mono);font-size:1.7rem;font-weight:500;line-height:1.2;margin-top:2px}
+.stat .v small{font-size:.9rem;color:var(--muted)}
+.checklist{display:flex;flex-direction:column}
+.task{display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:center;padding:12px 4px;border-top:1px solid var(--line)}
+.task:first-child{border-top:0}
+.task .box{width:22px;height:22px;border-radius:6px;border:2px solid var(--line);display:grid;place-items:center;background:var(--surface);cursor:pointer}
+.task.done .box{background:var(--good);border-color:var(--good);color:#fff}
+.task .t{font-weight:600}
+.task .d{font-size:.83rem;color:var(--muted)}
+.task.done .t{text-decoration:line-through;color:var(--muted)}
+.bar{height:8px;background:var(--surface2);border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:999px;transition:width .3s}
+
+/* speaking */
+.scene{background:var(--surface2);border:1px dashed var(--line);border-radius:var(--r);padding:14px 16px;font-size:.95rem}
+.sentlist{display:flex;flex-direction:column;gap:8px}
+.sent{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+.sent .n{font-family:var(--mono);color:var(--muted)}
+.sent.cur{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.sent .sc{font-family:var(--mono);font-weight:500}
+.diff{line-height:2;font-size:1.02rem}
+.diff .ok{}
+.diff .miss{background:var(--mark-miss);color:var(--bad);text-decoration:line-through;padding:1px 4px;border-radius:4px}
+.diff .extra{background:var(--mark-extra);color:var(--warn);padding:1px 4px;border-radius:4px}
+.talk{background:var(--accent);color:var(--accent-ink);border:0;border-radius:12px;padding:16px 26px;font-size:1.05rem;font-weight:700;display:inline-flex;align-items:center;gap:10px;user-select:none;-webkit-user-select:none;touch-action:none;min-width:230px;justify-content:center}
+.talk:disabled{opacity:.4;cursor:default}
+.talk .ic{width:13px;height:13px;border-radius:50%;background:currentColor;flex:none}
+.talk.live{background:var(--bad);color:#fff;box-shadow:0 0 0 5px var(--bad-soft)}
+.talk.live .ic{animation:blink 1s ease-in-out infinite}
+.talkhint{font-size:.85rem;color:var(--muted)}
+.meter{display:inline-block;width:90px;height:8px;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface2);vertical-align:middle}
+.meter i{display:block;height:100%;width:0;background:var(--good);transition:width .05s}
+.rec{width:14px;height:14px;border-radius:50%;background:var(--bad);display:inline-block;animation:blink 1s ease-in-out infinite}
+@keyframes blink{50%{opacity:.25}}
+.big{font-size:1.15rem;line-height:1.6}
+.transcript{background:var(--surface2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;min-height:48px;font-size:.98rem}
+.qtabs{display:flex;gap:6px;flex-wrap:wrap}
+.qtabs button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:.85rem;color:var(--ink)}
+.qtabs button.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+/* reading */
+.passage{font-size:1.02rem;line-height:1.9;max-width:70ch}
+.passage .blank{display:inline-flex;align-items:baseline;gap:0;margin:0 2px;border-bottom:2px solid var(--accent);padding:0 2px}
+.passage .blank input{border:0;padding:0;background:transparent;font:inherit;width:6ch;min-width:3ch;color:var(--accent);font-weight:600;border-radius:0}
+.passage .blank input:focus{outline:none;background:var(--accent-soft)}
+.passage .blank .rest{color:var(--muted);letter-spacing:.05em}
+.passage .blank input:placeholder-shown{width:1ch}
+.passage .blank.ok{border-bottom-color:var(--good)}.passage .blank.ok input{color:var(--good)}
+.passage .blank.no{border-bottom-color:var(--bad)}.passage .blank.no input{color:var(--bad)}
+.passage .ans{font-size:.8rem;color:var(--good);margin-left:4px}
+.mcq{display:flex;flex-direction:column;gap:14px}
+.q{border-top:1px solid var(--line);padding-top:12px}
+.q .qt{font-weight:600;margin-bottom:8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border:1px solid var(--line);border-radius:8px;margin-bottom:6px;cursor:pointer;background:var(--surface)}
+.opt:hover{background:var(--surface2)}
+.opt.sel{border-color:var(--accent);background:var(--accent-soft)}
+.opt.right{border-color:var(--good);background:var(--good-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt .l{font-family:var(--mono);color:var(--muted);flex:none}
+.daily{background:var(--surface2);border:1px solid var(--line);border-radius:8px;padding:14px 16px;white-space:pre-wrap;font-size:.95rem;line-height:1.6;max-width:70ch}
+.explain{font-size:.85rem;color:var(--muted);margin-top:4px}
+
+/* writing */
+.chunks{display:flex;flex-wrap:wrap;gap:8px;min-height:44px;padding:8px;border:1px dashed var(--line);border-radius:8px}
+.chunk{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:6px 12px;cursor:pointer;font-size:1rem}
+.chunk:hover{border-color:var(--accent)}
+.built{display:flex;flex-wrap:wrap;gap:8px;min-height:44px;padding:8px;border:2px solid var(--accent);border-radius:8px;background:var(--accent-soft)}
+.built .chunk{background:var(--surface)}
+.wc{font-family:var(--mono);font-size:.85rem;color:var(--muted)}
+.feedback{white-space:pre-wrap;line-height:1.7;font-size:.95rem}
+.feedback h4{font-family:var(--display);margin:14px 0 4px;font-size:.9rem}
+.score{display:inline-grid;place-items:center;width:52px;height:52px;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-family:var(--mono);font-size:1.4rem;font-weight:500}
+.scores{display:flex;gap:10px;flex-wrap:wrap}
+.scores .s{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:.75rem;color:var(--muted)}
+
+/* listening */
+.audiobar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 14px;background:var(--surface2);border-radius:8px;border:1px solid var(--line)}
+.speaker{width:44px;height:44px;border-radius:50%;background:var(--accent-soft);display:grid;place-items:center;font-size:1.3rem}
+
+/* tables */
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+.tablewrap{overflow-x:auto;max-width:100%}
+.res{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.res:first-child{border-top:0}
+.res .t{font-weight:600}.res .d{font-size:.83rem;color:var(--muted)}
+
+@media (max-width:760px){
+  .app{grid-template-columns:1fr}
+  .rail{position:sticky;top:env(safe-area-inset-top,0px);height:auto;border-right:0;border-bottom:1px solid var(--line);padding:10px 12px;z-index:5}
+  .brand{padding:2px 4px 8px;font-size:.95rem}
+  .nav{flex-direction:row;overflow-x:auto;gap:4px;padding-bottom:2px}
+  .nav .grp{display:none}
+  .nav button{white-space:nowrap;padding:6px 10px;font-size:.85rem}
+  .nav button .dot{display:none}
+  .task{grid-template-columns:28px 1fr}.task .act{grid-column:2}
+}
+
+.modal{position:fixed;inset:0;background:rgba(10,14,18,.6);display:grid;place-items:center;z-index:50;padding:16px}
+.modal .box{background:var(--surface);border:1px solid var(--line);border-radius:12px;max-width:640px;width:100%;max-height:90vh;overflow:auto;padding:18px 20px;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.modal textarea{min-height:120px;font-family:var(--mono);font-size:.78rem}
+</style>
+
+<script>
+/* 題庫：Listen and Repeat 12 組 × 7 句，句長遞增；Interview 16 主題 × 4 題 */
+const LR_BANK = [
+{s:"動物園導覽",e:"You are on a guided tour of the city zoo. Listen to the guide.",l:[
+"Welcome to the city zoo, everyone.",
+"Please stay on the marked path at all times.",
+"The lions are usually fed at around noon each day.",
+"Restrooms are located near the gift shop by the main gate.",
+"Please keep young children close to you while we walk through the reptile house.",
+"If you would like to watch the penguin feeding, meet me back here at half past two.",
+"Thank you all for visiting today, and please remember that the last shuttle back to the parking lot leaves at six sharp."]},
+{s:"登機門廣播",e:"You are waiting at an airport gate. Listen to the announcement.",l:[
+"Good afternoon and welcome aboard, passengers.",
+"We will begin boarding in about ten minutes.",
+"Please have your boarding pass and your passport ready.",
+"Passengers seated in rows twenty through forty will be invited to board first.",
+"Large bags that do not fit under the seat must be checked at the gate.",
+"We are expecting some light turbulence after takeoff, so please keep your seatbelt fastened while seated.",
+"If you need assistance during the flight, press the call button above your seat and a member of the crew will come to help you."]},
+{s:"系所新生說明會",e:"You are at a department orientation. Listen to the coordinator.",l:[
+"Welcome to the department of biology.",
+"Your student ID card will arrive by email tomorrow.",
+"The main laboratory is on the third floor of this building.",
+"You will need to complete the online safety training before you use any equipment.",
+"Office hours for your academic adviser are Tuesdays and Thursdays from two to four.",
+"If you plan to change your course selection, the deadline for adding classes is next Friday.",
+"Finally, please check your university email every single day, because important notices about registration and funding are only sent that way."]},
+{s:"圖書館規則",e:"You are being shown around a university library. Listen to the librarian.",l:[
+"This floor is a quiet study area.",
+"Please switch your phone to silent before you sit down.",
+"Books from the reference section cannot be taken out of the building.",
+"You can borrow up to eight items at a time using your student card.",
+"The self checkout machines are just past the information desk on your left hand side.",
+"If a book you need is already on loan, you can place a hold and we will email you.",
+"Group study rooms on the second floor can be booked online for up to three hours, but they must be cancelled if your plans change."]},
+{s:"健身房說明",e:"You are joining a gym. Listen to the trainer.",l:[
+"Let me show you around the main floor.",
+"Please wipe down each machine after you finish using it.",
+"Towels are available at the front desk for a small deposit.",
+"The changing rooms are through the doors behind the reception area.",
+"Classes such as yoga and spinning need to be booked at least a day in advance.",
+"If you are not sure how a machine works, please ask a member of staff instead of guessing.",
+"Your membership includes one free session with a personal trainer, and you can arrange that at the desk any time before the end of the month."]},
+{s:"博物館導覽",e:"You are on a museum tour. Listen to the docent.",l:[
+"Good morning, and thank you for joining us.",
+"Photography without flash is allowed in most of the galleries.",
+"The exhibition we are about to enter opened just three weeks ago.",
+"Please do not touch the sculptures, even the ones without a rope around them.",
+"The artist painted this particular landscape during the last two years of her life.",
+"If you look closely at the lower left corner, you can still see the original pencil lines.",
+"We will take a short break in the courtyard at eleven, and the second half of the tour will begin promptly fifteen minutes after that."]},
+{s:"烹飪課",e:"You are in a cooking class. Listen to the instructor.",l:[
+"Everyone should have a cutting board in front of them.",
+"Wash your hands thoroughly before you touch any ingredients.",
+"Today we are making a simple tomato sauce from scratch.",
+"Heat the oil gently until it shimmers, but do not let it smoke.",
+"Add the garlic first and stir it constantly for about thirty seconds.",
+"If the sauce starts to stick to the bottom of the pan, lower the heat immediately.",
+"While the sauce simmers for twenty minutes, we will prepare the salad, and I will come around to check on each of your stations."]},
+{s:"藥局",e:"You are picking up a prescription. Listen to the pharmacist.",l:[
+"Your prescription is ready now.",
+"Take one tablet twice a day with food.",
+"Try not to skip a dose, even if you feel better.",
+"This medication may make you feel a little drowsy at first.",
+"You should avoid driving until you know how your body reacts to it.",
+"If you notice a rash or any swelling, stop taking it and call your doctor.",
+"There are enough tablets here for fourteen days, and if you still need them after that, you will have to get a new prescription from the clinic."]},
+{s:"旅館入住",e:"You are checking into a hotel. Listen to the receptionist.",l:[
+"Welcome, and thank you for choosing us.",
+"Your room is on the eighth floor, number eight fourteen.",
+"Breakfast is served in the dining room from six thirty to ten.",
+"The elevators are just around the corner behind the marble pillar.",
+"Please use your key card to access the floor as well as the room itself.",
+"Checkout is at eleven, but we can hold your luggage here if your flight is later.",
+"If you would like a wake up call or an extra pillow, simply dial zero from the phone in your room and someone will take care of it."]},
+{s:"火車站",e:"You are at a train station. Listen to the announcement.",l:[
+"Attention passengers on platform four.",
+"The express service to the capital is running late.",
+"We expect it to arrive in approximately twenty five minutes.",
+"Passengers with reserved seats should wait near the front of the platform.",
+"We apologise for the delay, which was caused by a signal fault further up the line.",
+"If your connection is affected, please speak to a member of staff at the information window.",
+"Refreshments are available in the main hall, and passengers holding tickets for this service may claim a complimentary drink at the counter near the entrance."]},
+{s:"租屋看房",e:"You are viewing an apartment. Listen to the agent.",l:[
+"This is the living room, as you can see.",
+"The windows face south, so it gets plenty of light.",
+"Heating and water are included in the monthly rent.",
+"The nearest bus stop is about a four minute walk from the front door.",
+"The landlord is willing to repaint the bedroom before a new tenant moves in.",
+"There is a laundry room in the basement, although you will need coins for the machines.",
+"If you decide to take it, the deposit is one month of rent, and the lease would normally run for twelve months starting from the first of next month."]},
+{s:"實驗室安全",e:"You are attending a lab safety briefing. Listen to the supervisor.",l:[
+"Safety goggles must be worn at all times.",
+"Never eat or drink anything inside the laboratory.",
+"Long hair should be tied back before you begin any experiment.",
+"The emergency shower and eye wash station are next to the back door.",
+"Chemical waste goes into the labelled containers, never down the sink under any circumstances.",
+"If you spill something and you are not sure what it is, do not try to clean it yourself.",
+"Report every accident, however minor it seems, to the supervisor on duty, because we are required to keep a written record of all incidents."]}
+];
+
+const IV_BANK = [
+{t:"通勤與住處",q:["Do you currently live in a big city, a small town, or somewhere quieter?","How do you usually get to work or to your campus each day?","Describe a time when your usual journey went badly wrong.","Do you think the way people travel around cities will change much in the next ten years?"]},
+{t:"飲食與烹飪",q:["Do you usually cook for yourself, or do you eat out most of the time?","What is a dish that you know how to make well?","Describe a meal that you remember for some reason.","Some people say cooking at home is always healthier than eating out. Do you agree?"]},
+{t:"讀書習慣",q:["Where do you usually study or do focused work?","Do you prefer working early in the morning or late at night?","Describe a time when you had to learn something difficult in a short period.","Do you think people concentrate better alone or in a group?"]},
+{t:"科技使用",q:["How often do you check your phone during a normal day?","Describe a situation when your phone was genuinely useful to you.","Is there any app that you have deliberately deleted or stopped using?","Do you think people will use their phones more or less in the future?"]},
+{t:"週末與休閒",q:["What did you do last weekend?","Do you prefer to plan your free time or decide on the day?","Describe an activity you started recently and enjoyed.","Some people say that doing nothing at the weekend is a waste of time. What do you think?"]},
+{t:"居住的社區",q:["What is the area where you live like?","What is one thing you would change about your neighbourhood?","Describe a place near your home that you go to often.","Do you think it is important to know the people who live near you?"]},
+{t:"旅行",q:["When was the last time you travelled somewhere new?","Do you prefer travelling alone or with other people?","Describe a trip that did not go the way you expected.","Do you think travelling is the best way to learn about another country?"]},
+{t:"興趣與嗜好",q:["What do you do when you want to relax?","How did you first get interested in that?","Describe something you are trying to get better at.","Do you think hobbies should be useful, or is enjoyment enough?"]},
+{t:"工作經驗",q:["Have you ever had a part time job or an internship?","What was the most difficult part of it?","Describe a time when you had to work with someone difficult.","What do you think makes someone good at working in a team?"]},
+{t:"音樂與電影",q:["What kind of music do you listen to while you work?","Describe a film or a series that you have recommended to someone.","Do you prefer watching something alone or with other people?","Do you think streaming has changed the way people watch films?"]},
+{t:"運動",q:["Do you play any sport or exercise regularly?","Describe a time when you pushed yourself physically.","Is it better to exercise outdoors or in a gym, in your opinion?","Should schools require all students to do sport?"]},
+{t:"購物與金錢",q:["Do you prefer shopping online or in a physical store?","Describe something you bought recently that was worth the money.","Do you plan your spending, or decide as you go?","Do you think people buy too many things they do not need?"]},
+{t:"學習語言",q:["How long have you been learning English?","What part of learning a language do you find hardest?","Describe a moment when you managed to communicate despite the language barrier.","Do you think everyone should learn a second language?"]},
+{t:"環境",q:["Do you do anything in daily life to reduce waste?","Describe a change in your city that was meant to help the environment.","Whose responsibility is it to deal with climate change, in your view?","Do you think individual habits make a real difference?"]},
+{t:"朋友與社交",q:["How do you usually keep in touch with friends who live far away?","Describe a friend who has influenced you.","Do you find it easy to meet new people?","Do you think online friendships can be as close as face to face ones?"]},
+{t:"未來計畫",q:["What are you hoping to do in the next couple of years?","Describe a goal you set for yourself and how it went.","Do you prefer having a detailed plan or keeping your options open?","Do you think it is possible to plan a career these days?"]}
+];
+
+</script>
+<div class="modal" id="pasteModal" hidden><div class="box">
+  <h2 style="margin-bottom:6px">手動貼上模式</h2>
+  <p class="small muted">這個頁面沒有連到 AI。把下面整段複製，貼進任何一個 Claude 對話，再把 Claude 的回覆整段貼回下面的框。</p>
+  <div class="small muted" style="margin:12px 0 4px">① 複製這段給 Claude</div>
+  <textarea id="pmPrompt" readonly></textarea>
+  <button class="btn sm" id="pmCopy" style="margin-top:6px">複製題目</button>
+  <div class="small muted" style="margin:14px 0 4px">② 把 Claude 的回覆貼在這裡</div>
+  <textarea id="pmReply" placeholder="貼上 Claude 的回覆（JSON）"></textarea>
+  <div class="status" id="pmStatus" style="margin-top:6px"></div>
+  <div class="row" style="margin-top:10px"><button class="btn" id="pmGo">送出</button><button class="btn ghost" id="pmCancel">取消</button></div>
+</div></div>
+
+<div class="app">
+<aside class="rail">
+  <div class="brand">TOEFL 每日訓練<small id="brandsub">iBT 2026 新制 · 目標 5.0</small></div>
+  <nav class="nav" id="nav">
+    <button data-p="home" class="on">今日任務</button>
+    <div class="grp">Speaking</div>
+    <button data-p="lr">Listen &amp; Repeat <span class="dot" data-k="lr"></span></button>
+    <button data-p="iv">Interview <span class="dot" data-k="iv"></span></button>
+    <div class="grp">Writing</div>
+    <button data-p="bs">Build a Sentence <span class="dot" data-k="bs"></span></button>
+    <button data-p="em">Email <span class="dot" data-k="em"></span></button>
+    <button data-p="ad">Academic Discussion <span class="dot" data-k="ad"></span></button>
+    <div class="grp">Reading</div>
+    <button data-p="cw">Complete the Words <span class="dot" data-k="cw"></span></button>
+    <button data-p="rd">Daily Life + Academic <span class="dot" data-k="rd"></span></button>
+    <div class="grp">Listening</div>
+    <button data-p="cr">Choose a Response <span class="dot" data-k="cr"></span></button>
+    <button data-p="ls">Listening Set <span class="dot" data-k="ls"></span></button>
+    <div class="grp">More</div>
+    <button data-p="err">錯題本 <span class="dot" data-k="err"></span></button>
+    <button data-p="log">成績紀錄</button>
+    <button data-p="vocab">單字本</button>
+    <button data-p="res">外部資源</button>
+    <button data-p="set">設定</button>
+  </nav>
+</aside>
+
+<main class="main">
+
+<!-- HOME -->
+<section class="page on" id="p-home">
+  <div class="head"><div><h1 id="homeTitle">今日任務</h1><p class="sub" id="homeSub"></p></div><span class="pill acc" id="aiPill">AI 連線中…</span></div>
+  <div class="stack">
+    <div class="daystrip">
+      <div class="stat"><div class="k">Day</div><div class="v" id="stDay">–<small>/60</small></div></div>
+      <div class="stat"><div class="k">距離考試</div><div class="v" id="stExam">–<small> 天</small></div></div>
+      <div class="stat"><div class="k">今日區塊</div><div class="v" id="stDone">0<small>/6</small></div></div>
+      <div class="stat"><div class="k">連續天數</div><div class="v" id="stStreak">0<small> 天</small></div></div>
+    </div>
+    <div class="card">
+      <div class="row" style="justify-content:space-between;margin-bottom:8px"><h2>每日清單</h2><span class="small muted" id="todayDate"></span></div>
+      <div class="bar" style="margin-bottom:8px"><i id="homeBar" style="width:0%"></i></div>
+      <div class="checklist" id="checklist"></div>
+      <div class="row" id="homeMicRow" style="margin-top:12px"><button class="btn" id="homeMicBtn">產生今日口說並開啟麥克風模式</button><span class="status" id="homeMicStatus"></span></div>
+      <div id="homeSetBox" hidden style="margin-top:10px"><div class="small muted" style="margin-bottom:4px">題組代碼（複製後，到「麥克風版」頁面貼上載入）</div><textarea id="homeSetCode" readonly style="min-height:70px;font-family:var(--mono);font-size:.8rem"></textarea><div class="row" style="margin-top:6px"><button class="btn sm" id="homeSetCopy">複製題組代碼</button><button class="btn ghost sm" id="homeSetOpen">試著在新分頁開啟（不一定成功）</button></div></div>
+      <p class="small muted" id="homeMicHint">手機最省事：直接在手機上開這個網站做口說，作答框會用鍵盤的麥克風按鈕聽寫，不需要任何權限。電腦上 claude.ai 的框架擋麥克風，要錄音的話按下面的按鈕產生題目、複製題組代碼，到「麥克風版」HTML 檔貼上，練完再把結果代碼貼回來；或者到設定把作答方式改成「一律用鍵盤聽寫」，電腦上也能直接打字作答。</p>
+      <p class="note" id="satNote" hidden>今天是週六。照計畫做一回 ETS TestReady 官方模考並逐題檢討，把四科級分記在「成績紀錄」。只用官方題目判斷進度，第三方模考會高估你一整級。</p>
+    </div>
+    <div class="grid2">
+      <div class="card"><h3>最近口說</h3><div id="homeSpeak" class="small muted" style="margin-top:8px">還沒有紀錄</div></div>
+      <div class="card"><h3>最近 A／B 區塊</h3><div id="homeWrite" class="small muted" style="margin-top:8px">還沒有紀錄</div></div>
+    </div>
+    <p class="note">題目由 AI 依 ETS 2026 年版考試規格即時生成，題型、字數、時間限制都對齊正式考試。A、B 兩個區塊是每天的分數來源，題量刻意開到正式考試的兩倍。錯的字會自動進單字本，錯的題型會自動進錯題本。</p>
+  </div>
+</section>
+
+<!-- LISTEN & REPEAT -->
+<section class="page" id="p-lr">
+  <div class="head"><div><h1>Listen and Repeat</h1><p class="sub">7 句，同一個情境，只播一次、不顯示文字、沒有準備時間。第 1–2 句 8 秒、第 3–5 句 10 秒、第 6–7 句 12 秒。目標是一字不差地重複。</p></div><span class="pill" id="lrPill">今日未完成</span></div>
+  <div class="stack">
+    <div class="card stack">
+      <div class="note warnnote" id="lrMicBar" hidden></div>
+      <div id="lrSetBox" hidden><div class="small muted" style="margin-bottom:4px">貼上 claude.ai 頁面給你的「題組代碼」</div><div class="row"><textarea id="lrSetPaste" style="min-height:60px" placeholder="題組代碼"></textarea><button class="btn sm" id="lrSetGo">載入題組</button></div></div>
+      <div class="row"><button class="btn" id="lrGen">產生今日題組</button><select id="lrLevel"><option value="3">難度 3（B1）</option><option value="4" selected>難度 4（B2）</option><option value="5">難度 5（C1）</option></select><button class="btn ghost" id="lrMicOpen" disabled>用麥克風模式開啟（新分頁）</button><button class="btn ghost sm" id="lrPasteBtn">貼上結果代碼</button><span class="status" id="lrStatus"></span></div>
+      <div id="lrPasteBox" hidden class="row"><textarea id="lrPaste" style="min-height:70px" placeholder="把麥克風模式產生的結果代碼貼在這裡"></textarea><button class="btn sm" id="lrPasteGo">載入並評分</button></div>
+      <div class="scene" id="lrScene" hidden></div>
+      <div id="lrStage" hidden class="stack">
+        <div class="row" style="justify-content:space-between"><div class="row"><span class="pill acc" id="lrCur">第 1 句</span><span id="lrRec" hidden class="row"><span class="rec"></span> 錄音中 <span class="meter"><i id="lrMeter"></i></span></span></div><div class="timer" id="lrTimer">–</div></div>
+        <div class="row"><button class="btn" id="lrPlay">▶ 播放句子</button><button class="btn ghost" id="lrReplay" disabled>再聽一次（練習用）</button><button class="btn ghost sm" id="lrStop" hidden>結束</button></div>
+        <div class="row"><button class="talk" id="lrTalk" disabled><span class="ic"></span><span class="tx">按住說話</span></button><span class="talkhint" id="lrTalkHint">先按「播放句子」，聽完之後按住這顆按鈕開始講；放開就對答案。也可以點一下開始、再點一下結束。</span></div>
+        <div>
+          <div class="small muted" style="margin-bottom:4px">你說的（語音辨識）</div>
+          <div class="transcript" id="lrTrans"></div>
+          <div id="lrDictBox" hidden style="margin-top:8px"><div class="small muted" style="margin-bottom:4px">點進框裡，用鍵盤上的麥克風按鈕講出你聽到的句子</div><textarea id="lrDictIn" style="min-height:70px" placeholder="按鍵盤的麥克風圖示開始說"></textarea><div class="row" style="margin-top:6px"><button class="btn sm" id="lrDictGo">送出對答案</button><button class="btn ghost sm" id="lrMicRetry">改回用麥克風</button></div></div>
+          <div id="lrManual" hidden style="margin-top:6px"><input id="lrManualIn" style="width:100%" placeholder="這個瀏覽器不支援語音辨識，請把你剛才說的句子打在這裡再按「對答案」"><button class="btn sm" id="lrManualBtn" style="margin-top:6px">對答案</button></div>
+        </div>
+        <div id="lrResult" hidden>
+          <div class="small muted" style="margin-bottom:4px">原句對照（紅色刪除線＝漏掉或講錯，黃色＝多講或替換）</div>
+          <div class="diff" id="lrDiff"></div>
+          <div class="row" style="margin-top:8px"><span class="pill" id="lrScore"></span><audio id="lrAudio" controls hidden></audio><button class="btn ghost sm" id="lrNext">下一句 →</button></div>
+        </div>
+      </div>
+      <div class="sentlist" id="lrList" hidden></div>
+      <div id="lrSummary" hidden class="stack">
+        <div class="row"><h3>本回結果</h3><span class="pill acc" id="lrTotal"></span></div>
+        <div class="feedback" id="lrFeedback"></div>
+        <div id="lrCodeBox" hidden><div class="small muted" style="margin-bottom:4px">結果代碼（複製後回到 claude.ai 的頁面貼上）</div><textarea id="lrCode" readonly style="min-height:70px;font-family:var(--mono);font-size:.8rem"></textarea><button class="btn sm" id="lrCopy" style="margin-top:6px">複製結果代碼</button></div>
+        <div class="row"><button class="btn" id="lrSave">記錄並完成今日</button><button class="btn ghost" id="lrAgain">再練一回</button></div>
+      </div>
+    </div>
+    <p class="note">評分方式比照 ETS 的 0–5 級：5＝完整且清楚地重複；4＝少數字詞或文法改動但意思不變；3＝大部分內容有講到但清晰度不足；2＝漏掉重要部分；1＝幾乎沒講到。這裡的分數用字詞比對估算，正式考試還會看清晰度。</p>
+  </div>
+</section>
+
+<!-- INTERVIEW -->
+<section class="page" id="p-iv">
+  <div class="head"><div><h1>Take an Interview</h1><p class="sub">4 題日常或校園話題，每題 45 秒，沒有準備時間、不能做筆記。評分看流暢度、清晰度、語言使用、組織與切題。</p></div><span class="pill" id="ivPill">今日未完成</span></div>
+  <div class="stack">
+    <div class="card stack">
+      <div class="note warnnote" id="ivMicBar" hidden></div>
+      <div id="ivSetBox" hidden><div class="small muted" style="margin-bottom:4px">貼上 claude.ai 頁面給你的「題組代碼」</div><div class="row"><textarea id="ivSetPaste" style="min-height:60px" placeholder="題組代碼"></textarea><button class="btn sm" id="ivSetGo">載入題組</button></div></div>
+      <div class="row"><button class="btn" id="ivGen">產生今日訪談</button><input id="ivTopic" placeholder="主題（留空隨機）" style="width:220px"><button class="btn ghost" id="ivMicOpen" disabled>用麥克風模式開啟（新分頁）</button><button class="btn ghost sm" id="ivPasteBtn">貼上結果代碼</button><span class="status" id="ivStatus"></span></div>
+      <div id="ivPasteBox" hidden class="row"><textarea id="ivPaste" style="min-height:70px" placeholder="把麥克風模式產生的結果代碼貼在這裡"></textarea><button class="btn sm" id="ivPasteGo">載入答案</button></div>
+      <div id="ivStage" hidden class="stack">
+        <div class="qtabs" id="ivTabs"></div>
+        <div class="big" id="ivQ"></div>
+        <div class="row" style="justify-content:space-between"><div class="row"><span id="ivRec" hidden class="row"><span class="rec"></span> 錄音中 <span class="meter"><i id="ivMeter"></i></span></span></div><div class="timer" id="ivTimer">45</div></div>
+        <div class="row"><button class="btn" id="ivStart">▶ 播放題目</button><button class="btn ghost sm" id="ivMicRetry" hidden>改回用麥克風</button><button class="btn ghost sm" id="ivDone" hidden>結束</button></div>
+        <div class="row"><button class="talk" id="ivTalk" disabled><span class="ic"></span><span class="tx">按住說話（45 秒）</span></button><span class="talkhint" id="ivTalkHint">聽完題目後按住這顆按鈕作答，放開結束。也可以點一下開始、再點一下結束。</span></div>
+        <div><div class="small muted" style="margin-bottom:4px">逐字稿</div><textarea id="ivTrans" style="min-height:100px" placeholder="語音辨識結果會出現在這裡；也可以自己修正或直接打字"></textarea><audio id="ivAudio" controls hidden style="margin-top:6px;width:100%"></audio></div>
+        <div class="row"><button class="btn ghost" id="ivSaveQ">儲存這題答案</button><button class="btn" id="ivGrade" disabled>四題都答完，送出 AI 評分</button></div>
+        <div id="ivCodeBox" hidden><div class="small muted" style="margin-bottom:4px">結果代碼（四題都存好後，複製回 claude.ai 的頁面貼上）</div><textarea id="ivCode" readonly style="min-height:90px;font-family:var(--mono);font-size:.8rem"></textarea><button class="btn sm" id="ivCopy" style="margin-top:6px">複製結果代碼</button></div>
+      </div>
+      <div id="ivResult" hidden class="stack">
+        <div class="row"><h3>評分結果</h3><span class="pill acc" id="ivBand"></span></div>
+        <div class="feedback" id="ivFeedback"></div>
+        <div class="row"><button class="btn" id="ivSave">記錄並完成今日</button><button class="btn ghost" id="ivAgain">再練一回</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUILD A SENTENCE -->
+<section class="page" id="p-bs">
+  <div class="head"><div><h1>Build a Sentence</h1><p class="sub">正式考試 10 題約 6 分鐘。先看情境句，再把片語排成一個正確的句子或問句。每題約 35 秒。</p></div><span class="pill" id="bsPill">今日未完成</span></div>
+  <div class="stack">
+    <div class="card stack">
+      <div class="row"><button class="btn" id="bsGen">產生 10 題</button><span class="status" id="bsStatus"></span><div class="timer" id="bsTimer" style="margin-left:auto">–</div></div>
+      <div id="bsStage" hidden class="stack">
+        <div class="row" style="justify-content:space-between"><span class="pill acc" id="bsCur">第 1 題</span><span class="mono small" id="bsScoreLive"></span></div>
+        <div class="muted" id="bsCtx"></div>
+        <div class="built" id="bsBuilt"></div>
+        <div class="chunks" id="bsChunks"></div>
+        <div class="row"><button class="btn ghost sm" id="bsUndo">退回一個</button><button class="btn" id="bsCheck">送出</button></div>
+        <div id="bsFb" class="feedback"></div>
+      </div>
+      <div id="bsSummary" hidden class="row"><span class="pill acc" id="bsTotal"></span><button class="btn" id="bsSave">記錄並完成今日</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL -->
+<section class="page" id="p-em">
+  <div class="head"><div><h1>Write an Email</h1><p class="sub">7 分鐘，讀完情境後寫一封回應三個要點的 email，建議 100–150 字。評分 0–5：三點是否都回應、語氣與書信慣例、語言正確度。</p></div><span class="pill" id="emPill">今日未完成</span></div>
+  <div class="stack">
+    <div class="card stack">
+      <div class="row"><button class="btn" id="emGen">產生今日題目</button><span class="status" id="emStatus"></span><div class="timer" id="emTimer" style="margin-left:auto">7:00</div></div>
+      <div id="emStage" hidden class="stack">
+        <div class="daily" id="emPrompt"></div>
+        <div class="row"><button class="btn ghost sm" id="emStart">開始計時 7 分鐘</button><span class="wc" id="emWc">0 words</span></div>
+        <textarea id="emText" placeholder="Dear ..."></textarea>
+        <div class="row"><button class="btn" id="emGrade">送出 AI 批改</button></div>
+        <div id="emResult" hidden class="stack">
+          <div class="scores" id="emScores"></div>
+          <div class="feedback" id="emFeedback"></div>
+          <div class="row"><button class="btn" id="emSave">記錄並完成今日</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMIC DISCUSSION -->
+<section class="page" id="p-ad">
+  <div class="head"><div><h1>Academic Discussion</h1><p class="sub">10 分鐘。教授貼文加兩位同學的回覆，你要表明立場、給理由和例子，並回應其中一位同學。至少 100 字。</p></div><span class="pill" id="adPill">今日未完成</span></div>
+  <div class="stack">
+    <div class="card stack">
+      <div class="row"><button class="btn" id="adGen">產生今日題目</button><span class="status" id="adStatus"></span><div class="timer" id="adTimer" style="margin-left:auto">10:00</div></div>
+      <div id="adStage" hidden class="stack">
+        <div class="daily" id="adPrompt"></div>
+        <div class="row"><button class="btn ghost sm" id="adStart">開始計時 10 分鐘</button><span class="wc" id="adWc">0 words</span></div>
+        <textarea id="adText" placeholder="I think ..."></textarea>
+        <div class="row"><button class="btn" id="adGrade">送出 AI 批改</button></div>
+        <div id="adResult" hidden class="stack">
+          <div class="scores" id="adScores"></div>
+          <div class="feedback" id="adFeedback"></div>
+          <div class="row"><button class="btn" id="adSave">記錄並完成今日</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLETE THE WORDS -->
+<section class="page" id="p-cw">
+  <div class="head"><div><h1>Complete the Words</h1><p class="sub">每天 60 格，是正式考試題量的兩倍。第一句完整，之後每隔幾個字挖一個空，只給前半段字母，底線數量等於缺的字母數。這是閱讀 60% 的題數，也是你目前最大的破口。</p></div><span class="pill" id="cwPill">今日未完成</span></div>
+  <div class="stack">
+    <div class="card stack">
+      <div class="row"><button class="btn" id="cwGen">產生 6 段（60 空）</button><span class="status" id="cwStatus"></span><div class="timer" id="cwTimer" style="margin-left:auto">–</div></div>
+      <div id="cwStage" hidden class="stack">
+        <div class="qtabs" id="cwTabs"></div>
+        <h3 id="cwTitle"></h3>
+        <div class="passage" id="cwPassage"></div>
+        <div class="row"><button class="btn" id="cwCheck">對答案</button><span class="pill" id="cwScore" hidden></span></div>
+      </div>
+      <div id="cwSummary" hidden class="row"><span class="pill acc" id="cwTotal"></span><button class="btn" id="cwSave">記錄並完成今日</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- READING -->
+<section class="page" id="p-rd">
+  <div class="head"><div><h1>Read in Daily Life + Academic Passage</h1><p class="sub">一篇生活文本（公告、email、對話串、菜單等，2–3 題）加一篇約 200 字的學術短文（5 題：主旨、細節、字彙、推論）。四選一，計時。</p></div><span class="pill" id="rdPill">今日未完成</span></div>
+  <div class="stack">
+    <div class="card stack">
+      <div class="row"><button class="btn" id="rdGen">產生今日閱讀</button><label class="small row"><input type="checkbox" id="rdRouter" checked> 分流模式（9 分鐘）</label><span class="status" id="rdStatus"></span><div class="timer" id="rdTimer" style="margin-left:auto">–</div></div>
+      <div id="rdStage" hidden class="stack">
+        <div><span class="pill acc">Read in Daily Life</span> <span class="small muted" id="rdType"></span></div>
+        <div class="daily" id="rdDaily"></div>
+        <div class="mcq" id="rdDailyQ"></div>
+        <div style="margin-top:10px"><span class="pill acc">Read an Academic Passage</span></div>
+        <h3 id="rdAcTitle"></h3>
+        <div class="passage" id="rdAc"></div>
+        <div class="mcq" id="rdAcQ"></div>
+        <div class="row"><button class="btn" id="rdCheck">對答案</button><span class="pill" id="rdScore" hidden></span><button class="btn ghost" id="rdSave" hidden>記錄並完成今日</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CHOOSE A RESPONSE -->
+<section class="page" id="p-cr">
+  <div class="head"><div><h1>Listen and Choose a Response</h1><p class="sub">每天 40 題。聽一句話，選出最自然的回應。這佔聽力 36% 的題數，考的是口語語用不是理解力，所以只播一次、不要重聽。</p></div><span class="pill" id="crPill">今日未完成</span></div>
+  <div class="stack">
+    <div class="card stack">
+      <div class="row"><button class="btn" id="crGen">產生 40 題</button><select id="crAccent"><option value="en-US">美式</option><option value="en-GB">英式</option><option value="en-AU">澳洲</option><option value="mix" selected>混合</option></select><label class="small row"><input type="checkbox" id="crReplay"> 允許重播（不建議）</label><span class="status" id="crStatus"></span></div>
+      <div class="bar" id="crLoadBar" hidden><i style="width:0%"></i></div>
+      <div id="crStage" hidden class="stack">
+        <div class="row" style="justify-content:space-between"><span class="pill acc" id="crCur">第 1 題</span><span class="mono small" id="crLive"></span></div>
+        <div class="audiobar"><div class="speaker">🔊</div><button class="btn" id="crPlay">▶ 播放</button><span class="small muted" id="crPlayed">只播一次</span></div>
+        <div class="mcq" id="crQ" hidden></div>
+        <div id="crFb"></div>
+      </div>
+      <div id="crSummary" hidden class="stack">
+        <div class="row"><h3>本回結果</h3><span class="pill acc" id="crTotal"></span></div>
+        <p class="small muted">下面是答錯的題目。每一句出聲跟讀三次再收工，這一步比再多做十題有用。</p>
+        <div id="crWrong" class="stack"></div>
+        <div class="row"><button class="btn" id="crSave">記錄並完成</button><button class="btn ghost" id="crAgain">再來一回</button></div>
+      </div>
+    </div>
+    <p class="note">這個題型的難點不是聽不懂，是聽懂了卻選到「語意對但語用怪」的選項。錯的時候要問自己：真的有人會這樣回話嗎。</p>
+  </div>
+</section>
+
+<!-- LISTENING -->
+<section class="page" id="p-ls">
+  <div class="head"><div><h1>Listening Set</h1><p class="sub">四種題型各一：Listen and Choose a Response、對話（2 題）、公告（2 題）、學術短講（4 題）。正式考試音檔只播一次，這裡預設也只播一次，聽完再作答。</p></div><span class="pill" id="lsPill">今日未完成</span></div>
+  <div class="stack">
+    <div class="card stack">
+      <div class="row"><button class="btn" id="lsGen">產生今日聽力</button><select id="lsAccent"><option value="en-US">美式</option><option value="en-GB">英式</option><option value="en-AU">澳洲</option><option value="mix" selected>混合</option></select><label class="small row"><input type="checkbox" id="lsAllowReplay"> 允許重播（練習用）</label><span class="status" id="lsStatus"></span></div>
+      <div id="lsStage" hidden class="stack"></div>
+      <div class="row" id="lsFoot" hidden><button class="btn" id="lsCheck">對答案</button><span class="pill" id="lsScore" hidden></span><button class="btn ghost" id="lsSave" hidden>記錄並完成今日</button><button class="btn ghost sm" id="lsShow" hidden>顯示逐字稿</button></div>
+    </div>
+    <p class="note">影集或 podcast 的聽力仍然建議每天 20 分鐘，做法是挑一段 30 秒的片段關字幕做 Listen and Repeat，素材連結在「外部資源」。</p>
+  </div>
+</section>
+
+
+<!-- ERROR LOG -->
+<section class="page" id="p-err">
+  <div class="head"><div><h1>錯題本</h1><p class="sub">不是記「這題錯了」，是記「錯在哪一類」。週日就靠這份分類決定要打哪個洞。沒有分類的錯題本等於沒有。</p></div><span class="pill" id="errPill">今日未完成</span></div>
+  <div class="stack">
+    <div class="card">
+      <h3>快速新增</h3>
+      <div class="qtabs" id="errQuick" style="margin-top:10px"></div>
+      <div class="row" style="margin-top:12px"><select id="errCat" style="min-width:170px"></select><input id="errNote" placeholder="補一句細節，例如 recieve 拼成 receive" style="flex:1;min-width:200px"><button class="btn sm" id="errAdd">新增</button></div>
+    </div>
+    <div class="card">
+      <div class="row" style="justify-content:space-between"><h3>最近七天的分類統計</h3><span class="pill" id="errTop" hidden></span></div>
+      <div id="errChart" style="margin-top:12px"></div>
+      <p class="small muted" id="errEmpty">還沒有紀錄。做完 A、B 區塊後把錯誤記進來。</p>
+    </div>
+    <div class="card">
+      <div class="row" style="justify-content:space-between;margin-bottom:8px"><h3>全部紀錄</h3><button class="btn ghost sm" id="errDone">標記今日錯題本完成</button></div>
+      <div class="tablewrap"><table id="errTable"><thead><tr><th>日期</th><th>分類</th><th>細節</th><th></th></tr></thead><tbody></tbody></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOG -->
+<section class="page" id="p-log">
+  <div class="head"><div><h1>成績紀錄</h1><p class="sub">每天各題型的分數，以及每週模考四科級分。</p></div></div>
+  <div class="stack">
+    <div class="card">
+      <h3>每週模考</h3>
+      <div class="row" style="margin-top:10px"><input type="date" id="mkDate"><input id="mkR" placeholder="R" style="width:64px"><input id="mkL" placeholder="L" style="width:64px"><input id="mkS" placeholder="S" style="width:64px"><input id="mkW" placeholder="W" style="width:64px"><input id="mkSrc" placeholder="來源（TestReady/TOEFLMock…）" style="width:200px"><button class="btn sm" id="mkAdd">新增</button></div>
+      <div class="tablewrap" style="margin-top:10px"><table id="mkTable"><thead><tr><th>日期</th><th>R</th><th>L</th><th>S</th><th>W</th><th>總分</th><th>來源</th><th></th></tr></thead><tbody></tbody></table></div>
+    </div>
+    <div class="card">
+      <h3>每日練習</h3>
+      <div class="tablewrap" style="margin-top:10px"><table id="logTable"><thead><tr><th>日期</th><th>L&amp;R</th><th>Interview</th><th>Build</th><th>Email</th><th>Discuss</th><th>Words</th><th>Reading</th><th>Listening</th></tr></thead><tbody></tbody></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- VOCAB -->
+<section class="page" id="p-vocab">
+  <div class="head"><div><h1>單字本</h1><p class="sub">Complete the Words 拼錯的字、Listen and Repeat 漏掉的字、批改裡指出的用字問題都會自動收進來。</p></div></div>
+  <div class="card">
+    <div class="row" style="margin-bottom:10px"><input id="vbAdd" placeholder="手動新增單字或片語" style="flex:1;min-width:200px"><button class="btn sm" id="vbAddBtn">新增</button><button class="btn ghost sm" id="vbClear">清空</button></div>
+    <div class="tablewrap"><table id="vbTable"><thead><tr><th>字詞</th><th>來源</th><th>日期</th><th></th></tr></thead><tbody></tbody></table></div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="page" id="p-res">
+  <div class="head"><div><h1>外部資源</h1><p class="sub">這個網站已經涵蓋每日練習，以下是官方規格、每週模考與跟讀素材，全部免費或有免費額度。</p></div></div>
+  <div class="stack">
+    <div class="card"><h3>官方（ETS）</h3><div id="resEts"></div></div>
+    <div class="card"><h3>每週全真模考</h3><div id="resMock"></div></div>
+    <div class="card"><h3>口說平台（有錄音回饋）</h3><div id="resSpeak"></div></div>
+    <div class="card"><h3>影集與 podcast 跟讀素材</h3><div id="resMedia"></div></div>
+  </div>
+</section>
+
+<!-- SETTINGS -->
+<section class="page" id="p-set">
+  <div class="head"><div><h1>設定</h1></div></div>
+  <div class="card stack">
+    <div class="grid2">
+      <label>計畫開始日<br><input type="date" id="setStart"></label>
+      <label>預定考試日<br><input type="date" id="setExam"></label>
+      <label>目前程度（用來調整題目難度）<br><select id="setLevel"><option value="3">3（B1）</option><option value="3.5">3.5</option><option value="4">4（B2）</option><option value="4.5">4.5</option><option value="5">5（C1）</option></select></label>
+      <label>語音辨識語言<br><select id="setSrLang"><option value="en-US">en-US</option><option value="en-GB">en-GB</option><option value="en-AU">en-AU</option></select></label>
+      <label>口說作答方式<br><select id="setDictate"><option value="auto">自動（手機用聽寫，電腦用麥克風）</option><option value="on">一律用鍵盤聽寫</option><option value="off">一律用麥克風錄音</option></select></label>
+    </div>
+    <div class="grid2">
+      <label>AI 管道<br><select id="setAiMode"><option value="auto">自動（在 claude.ai 用內建，其他用自架管道）</option><option value="proxy">一律用自架管道</option><option value="manual">一律手動貼上</option></select></label>
+      <label>管道網址<br><input id="setProxyUrl" placeholder="https://xxx.workers.dev"></label>
+      <label>管道通行碼<br><input id="setProxyKey" placeholder="部署 Worker 時自己設的字串"></label>
+    </div>
+    <div class="row"><button class="btn ghost sm" id="setProxyTest">測試管道</button><span class="small" id="setProxyOut"></span></div>
+    <div class="row"><button class="btn" id="setSave">儲存</button><span class="status" id="setStatus"></span></div>
+    <div class="note" id="setDiag"></div>
+    <div class="row"><button class="btn ghost sm" id="setTestMic">測試麥克風與語音辨識</button><button class="btn ghost sm" id="setTestTts">測試語音播放</button><span class="meter"><i id="setMeter"></i></span><span class="small" id="setTestOut" style="white-space:pre-wrap"></span></div>
+    <div class="row"><button class="btn danger sm" id="setReset">清除所有紀錄</button></div>
+  </div>
+</section>
+
+</main>
+</div>
+<script>
+/* ===== core ===== */
+const $ = (id) => document.getElementById(id);
+const todayKey = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
+const TASKS = [
+  { k: 'cw', t: 'Complete the Words', p: 'cw' },
+  { k: 'cr', t: 'Choose a Response', p: 'cr' },
+  { k: 'rd', t: 'Reading 整段', p: 'rd' },
+  { k: 'ls', t: 'Listening 整段', p: 'ls' },
+  { k: 'bs', t: 'Build a Sentence', p: 'bs' },
+  { k: 'em', t: 'Write an Email', p: 'em' },
+  { k: 'ad', t: 'Academic Discussion', p: 'ad' },
+  { k: 'lr', t: 'Listen and Repeat', p: 'lr' },
+  { k: 'iv', t: 'Take an Interview', p: 'iv' },
+  { k: 'err', t: '錯題本', p: 'err' },
+];
+const BLOCKS = [
+  { id: 'A', t: 'Complete the Words', d: '60 格，用鍵盤打，錯的字進生字卡', min: 60, all: ['cw'], go: 'cw' },
+  { id: 'B', t: 'Choose a Response', d: '40 題，一律只播一次', min: 45, all: ['cr'], go: 'cr' },
+  { id: 'C', t: '整段計時', d: '閱讀或聽力整段，重點在前 9 分鐘起跑', min: 45, any: ['rd', 'ls'], go: 'rd' },
+  { id: 'D', t: '寫作', d: 'Build a Sentence 10 題＋一篇計時作文', min: 60, all: ['bs'], any: ['em', 'ad'], go: 'bs' },
+  { id: 'E', t: '口說', d: 'Listen and Repeat 7 句＋Interview 4 題', min: 45, all: ['lr', 'iv'], go: 'lr' },
+  { id: 'F', t: '錯題本', d: '分類今天的錯誤，複習生字卡', min: 20, all: ['err'], go: 'err' },
+];
+function blockKeys(b) { return (b.all || []).concat(b.any || []); }
+function blockDone(b, d) {
+  const okAll = (b.all || []).every(k => d[k] && d[k].done);
+  const okAny = !b.any || b.any.some(k => d[k] && d[k].done);
+  return okAll && okAny;
+}
+function blockProgress(b, d) {
+  const need = (b.all || []).length + (b.any ? 1 : 0);
+  const got = (b.all || []).filter(k => d[k] && d[k].done).length + (b.any && b.any.some(k => d[k] && d[k].done) ? 1 : 0);
+  return got + '/' + need;
+}
+const DEFAULT_STATE = { start: '2026-09-19', exam: '2026-11-01', level: '3.5', srLang: 'en-US', dictate: 'auto', bankLr: 0, bankIv: 0, aiMode: 'auto', proxyUrl: '', proxyKey: '', days: {}, mocks: [], vocab: [], errors: [], updatedAt: 0 };
+const PLAN_DAYS = 77;
+const IS_TOUCH = (() => { try { return matchMedia('(pointer:coarse)').matches; } catch (e) { return false; } })();
+function dictating() { return S.dictate === 'on' || (S.dictate !== 'off' && IS_TOUCH); }
+let S = JSON.parse(JSON.stringify(DEFAULT_STATE));
+let db = null, sample = null, dbDoc = null, saveTimer = null;
+
+function loadLocal() { try { const raw = localStorage.getItem('toefl60'); if (raw) S = Object.assign({}, DEFAULT_STATE, JSON.parse(raw)); } catch (e) {} }
+function persist() {
+  S.updatedAt = Date.now();
+  try { localStorage.setItem('toefl60', JSON.stringify(S)); } catch (e) {}
+  if (dbDoc) { clearTimeout(saveTimer); saveTimer = setTimeout(() => { dbDoc.set(JSON.parse(JSON.stringify(S))).catch(() => {}); }, 800); }
+  renderHome();
+}
+function day(k) { k = k || todayKey(); if (!S.days[k]) S.days[k] = {}; return S.days[k]; }
+function markDone(k, score, extra) { const d = day(); d[k] = Object.assign({ done: true, score: score, at: Date.now() }, extra || {}); persist(); refreshPills(); }
+function addVocab(word, src) { word = String(word || '').trim().toLowerCase(); if (!word) return; if (S.vocab.some(v => v.w === word)) return; S.vocab.unshift({ w: word, src: src, d: todayKey() }); }
+
+async function initCaps() {
+  try {
+    const [d, sm] = await Promise.all([
+      window.claude && window.claude.use ? claude.use('db') : null,
+      window.claude && window.claude.use ? claude.use('sample') : null
+    ]);
+    sample = sm;
+    if (d) {
+      db = d; dbDoc = db.doc('progress/main');
+      try { const snap = await dbDoc.get(); if (snap.exists) { const remote = snap.data(); if ((remote.updatedAt || 0) > (S.updatedAt || 0)) { S = Object.assign({}, DEFAULT_STATE, remote); try { localStorage.setItem('toefl60', JSON.stringify(S)); } catch (e) {} } } } catch (e) {}
+    }
+  } catch (e) {}
+  aiPill();
+  renderAll();
+}
+function aiBackend() {
+  if (S.aiMode === 'manual') return 'manual';
+  if (S.aiMode === 'proxy') return S.proxyUrl ? 'proxy' : 'manual';
+  if (sample) return 'sample';
+  if (S.proxyUrl) return 'proxy';
+  return 'manual';
+}
+function aiPill() {
+  const p = $('aiPill'); if (!p) return;
+  const b = aiBackend();
+  const map = { sample: ['AI：claude.ai 內建', 'good'], proxy: ['AI：自架管道', 'good'], manual: ['AI：手動貼上模式', 'warn'] };
+  p.textContent = map[b][0]; p.className = 'pill ' + map[b][1];
+}
+
+/* ===== AI helper ===== */
+const LEVEL_DESC = { '3': 'CEFR B1', '3.5': 'B1+ to B2-', '4': 'CEFR B2', '4.5': 'B2+ to C1-', '5': 'CEFR C1' };
+function targetLevel() { const l = parseFloat(S.level || 3.5); return Math.min(5, l + 0.5); }
+function parseLoose(t) {
+  t = String(t == null ? '' : t).trim();
+  try { return JSON.parse(t); } catch (e) {}
+  const fence = t.match(/```(?:json)?\s*([\s\S]*?)```/);
+  if (fence) { try { return JSON.parse(fence[1].trim()); } catch (e) {} }
+  const a = t.search(/[{\[]/), b = Math.max(t.lastIndexOf('}'), t.lastIndexOf(']'));
+  if (a >= 0 && b > a) { try { return JSON.parse(t.slice(a, b + 1)); } catch (e) {} }
+  return null;
+}
+async function askProxy(prompt) {
+  const r = await fetch(S.proxyUrl, {
+    method: 'POST', headers: Object.assign({ 'Content-Type': 'application/json' }, S.proxyKey ? { 'X-App-Key': S.proxyKey } : {}),
+    body: JSON.stringify({ prompt: prompt, json: true })
+  });
+  if (!r.ok) { const t = await r.text().catch(() => ''); throw { code: 'proxy_' + r.status, message: (t || r.statusText).slice(0, 200) }; }
+  const d = await r.json().catch(() => null);
+  const text = d && (d.text || d.content || (d.content && d.content[0] && d.content[0].text));
+  const v = parseLoose(typeof text === 'string' ? text : JSON.stringify(d));
+  if (!v) throw { code: 'invalid_json', message: '管道回覆不是 JSON' };
+  return v;
+}
+let pasteResolve = null;
+function askManual(prompt) {
+  return new Promise((resolve, reject) => {
+    $('pmPrompt').value = prompt;
+    $('pmReply').value = '';
+    $('pmStatus').textContent = '';
+    $('pasteModal').hidden = false;
+    pasteResolve = { resolve, reject };
+    setTimeout(() => $('pmCopy').focus(), 50);
+  });
+}
+$('pmCopy').onclick = () => copyText($('pmPrompt').value, $('pmCopy'));
+$('pmGo').onclick = () => {
+  const v = parseLoose($('pmReply').value);
+  if (!v) { $('pmStatus').textContent = '看不出 JSON，請把 Claude 的回覆整段貼上'; return; }
+  $('pasteModal').hidden = true; if (pasteResolve) pasteResolve.resolve(v); pasteResolve = null;
+};
+$('pmCancel').onclick = () => { $('pasteModal').hidden = true; if (pasteResolve) pasteResolve.reject({ code: 'cancelled' }); pasteResolve = null; };
+async function askJSON(prompt, statusEl, opts) {
+  opts = opts || {};
+  const full = prompt + '\n\nSeed: ' + Date.now() + Math.random().toString(36).slice(2, 7);
+  const backend = aiBackend();
+  if (backend === 'manual') {
+    setStatus(statusEl, '手動模式：把題目貼到 Claude，再把回覆貼回來');
+    try { const v = await askManual(full); setStatus(statusEl, ''); return v; }
+    catch (e) { setStatus(statusEl, e.code === 'cancelled' ? '已取消' : '失敗', e.code !== 'cancelled'); throw e; }
+  }
+  setStatus(statusEl, opts.msg || 'AI 出題中（約 10–60 秒）…', false, true);
+  try {
+    let v;
+    if (backend === 'proxy') v = await askProxy(full);
+    else v = await sample.json(full, { cache: false, modelTier: opts.tier || 'default' });
+    setStatus(statusEl, '');
+    return v;
+  } catch (e) {
+    const m = { not_granted: '沒有允許這個頁面使用 Claude，重新整理後選允許', rate_limited: '呼叫太頻繁或用量已達上限，稍後再試', invalid_json: 'AI 回覆格式有誤，請再按一次', refused: 'AI 拒絕了這個請求，換個主題再試', sampling_disabled: '這個帳號無法使用 AI 功能', cancelled: '已取消' }[e.code] || ('發生錯誤：' + (e.message || e.code));
+    setStatus(statusEl, m, e.code !== 'cancelled');
+    throw e;
+  }
+}
+function setStatus(el, msg, bad, busy) { if (!el) return; el.innerHTML = (busy ? '<span class="spin"></span>' : '') + '<span>' + esc(msg) + '</span>'; el.style.color = bad ? 'var(--bad)' : ''; }
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+
+/* ===== nav ===== */
+function go(p) {
+  document.querySelectorAll('.page').forEach(x => x.classList.toggle('on', x.id === 'p-' + p));
+  document.querySelectorAll('#nav button').forEach(b => b.classList.toggle('on', b.dataset.p === p));
+  window.scrollTo(0, 0);
+
+  try { localStorage.setItem('toefl60.page', p); } catch (e) {}
+}
+$('nav').addEventListener('click', e => { const b = e.target.closest('button'); if (b) go(b.dataset.p); });
+
+/* ===== timers ===== */
+function makeTimer(el, onEnd) {
+  let left = 0, iv = null, total = 0;
+  const fmt = s => s >= 60 ? Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0') : String(s);
+  const api = {
+    start(sec) { api.stop(); left = total = sec; el.textContent = fmt(left); el.classList.remove('low'); iv = setInterval(() => { left--; el.textContent = fmt(Math.max(0, left)); if (left <= Math.min(10, total * .2)) el.classList.add('low'); if (left <= 0) { api.stop(); onEnd && onEnd(); } }, 1000); },
+    stop() { if (iv) clearInterval(iv); iv = null; },
+    running() { return !!iv; },
+    elapsed() { return total - left; }
+  };
+  return api;
+}
+
+/* ===== speech synthesis ===== */
+let voices = [];
+function loadVoices() { try { voices = speechSynthesis.getVoices(); } catch (e) { voices = []; } }
+if ('speechSynthesis' in window) { loadVoices(); speechSynthesis.onvoiceschanged = loadVoices; }
+function pickVoice(lang, idx) {
+  const cand = voices.filter(v => v.lang && v.lang.replace('_', '-').toLowerCase().startsWith(lang.toLowerCase()));
+  const pref = cand.filter(v => /natural|premium|enhanced|neural|google|samantha|daniel|karen|moira|aria|jenny|libby|sonia|natasha|william/i.test(v.name));
+  const pool = pref.length ? pref : cand;
+  if (!pool.length) return voices.find(v => /^en/i.test(v.lang)) || null;
+  return pool[(idx || 0) % pool.length];
+}
+function splitSentences(text) { return String(text).replace(/\s+/g, ' ').match(/[^.!?]+[.!?]+["”']?|[^.!?]+$/g) || [String(text)]; }
+function speakOne(text, opts) {
+  return new Promise(res => {
+    const u = new SpeechSynthesisUtterance(text);
+    const lang = opts.lang || 'en-US';
+    u.lang = lang; u.rate = opts.rate || 0.95; u.pitch = opts.pitch || 1; u.volume = opts.volume == null ? 1 : opts.volume;
+    const v = pickVoice(lang, opts.voiceIdx || 0); if (v) u.voice = v;
+    let done = false; const fin = () => { if (!done) { done = true; res(true); } };
+    u.onend = fin; u.onerror = fin;
+    speechSynthesis.speak(u);
+    setTimeout(fin, Math.max(3000, text.length * 110));
+  });
+}
+async function speak(text, opts) {
+  opts = opts || {};
+  if (!('speechSynthesis' in window)) return false;
+  speechSynthesis.cancel(); try { speechSynthesis.resume(); } catch (e) {}
+  if (!voices.length) { loadVoices(); await new Promise(r => setTimeout(r, 250)); loadVoices(); }
+  // silent lead-in so the first word is not clipped, then one utterance per sentence (long single utterances get cut off in Chrome)
+  await speakOne('Ready.', Object.assign({}, opts, { volume: 0 }));
+  for (const sen of splitSentences(text)) { if (sen.trim()) await speakOne(sen.trim(), opts); }
+  return true;
+}
+async function speakDialogue(turns, accent) {
+  for (const t of turns) { await speak(t.text, { lang: accent, voiceIdx: t.speaker === 'B' ? 1 : 0, pitch: t.speaker === 'B' ? 0.9 : 1.05 }); await new Promise(r => setTimeout(r, 350)); }
+}
+
+/* ===== speech recognition + recording ===== */
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition || null;
+let mediaStream = null;
+async function getMic() {
+  if (mediaStream) return mediaStream;
+  mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+  return mediaStream;
+}
+let srLastError = '', srFatal = false, meterCtx = null, meterAn = null, meterRaf = 0;
+const SR_MSG = { 'not-allowed': '瀏覽器拒絕了語音辨識的麥克風權限（請按網址列左邊的鎖頭允許麥克風，或用麥克風模式）', 'service-not-allowed': '這個環境不允許使用語音辨識服務', 'network': '語音辨識需要連到 Google 的伺服器，被瀏覽器或網路擋住了（Brave、Arc、Firefox、部分公司或校園網路會這樣），請改用 Chrome 或 Edge', 'audio-capture': '找不到可用的麥克風裝置，請檢查系統的輸入裝置', 'no-speech': '沒有偵測到語音（麥克風可能是靜音，或音量太小）', 'aborted': '辨識被中斷', 'language-not-supported': '不支援這個辨識語言' };
+function attachMeter(stream, el) {
+  try {
+    if (!meterCtx) { meterCtx = new (window.AudioContext || window.webkitAudioContext)(); meterAn = meterCtx.createAnalyser(); meterAn.fftSize = 512; meterCtx.createMediaStreamSource(stream).connect(meterAn); }
+    if (meterCtx.state === 'suspended') meterCtx.resume();
+    const buf = new Uint8Array(meterAn.fftSize); let peak = 0;
+    const tick = () => { meterAn.getByteTimeDomainData(buf); let sum = 0; for (let i = 0; i < buf.length; i++) { const v = (buf[i] - 128) / 128; sum += v * v; } const rms = Math.sqrt(sum / buf.length); peak = Math.max(peak, rms); if (el) el.style.width = Math.min(100, Math.round(rms * 400)) + '%'; meterRaf = requestAnimationFrame(tick); };
+    cancelAnimationFrame(meterRaf); tick();
+    return () => { cancelAnimationFrame(meterRaf); if (el) el.style.width = '0%'; return peak; };
+  } catch (e) { return () => 0; }
+}
+function startCapture(onInterim, meterEl) {
+  // returns {stop(): Promise<{transcript, blobUrl, srOk, srError, peak}>}
+  let finalText = '', interim = '', rec = null, chunks = [], recorder = null, stopped = false, stopMeter = () => 0;
+  const srOk = !!SR; srLastError = '';
+  if (srOk) {
+    rec = new SR(); rec.lang = S.srLang || 'en-US'; rec.continuous = true; rec.interimResults = true; rec.maxAlternatives = 1;
+    rec.onresult = e => { interim = ''; for (let i = e.resultIndex; i < e.results.length; i++) { const r = e.results[i]; if (r.isFinal) finalText += r[0].transcript + ' '; else interim += r[0].transcript; } onInterim && onInterim((finalText + interim).trim()); };
+    rec.onerror = e => { srLastError = e.error || 'unknown'; if (['not-allowed', 'service-not-allowed', 'network', 'audio-capture', 'language-not-supported'].includes(e.error)) { srFatal = true; if (e.error === 'not-allowed' || e.error === 'service-not-allowed') srDenied = true; stopped = true; } };
+    rec.onend = () => { if (!stopped) { try { rec.start(); } catch (e) {} } };
+    try { rec.start(); } catch (e) { srLastError = 'start-failed: ' + (e.message || e); }
+  }
+  const recP = getMic().then(stream => { stopMeter = attachMeter(stream, meterEl); try { recorder = new MediaRecorder(stream); recorder.ondataavailable = e => chunks.push(e.data); recorder.start(); } catch (e) {} }).catch(() => {});
+  return {
+    stop() {
+      stopped = true;
+      return new Promise(res => {
+        let done = false;
+        const finish = () => { if (done) return; done = true; const peak = stopMeter(); const blobUrl = chunks.length ? URL.createObjectURL(new Blob(chunks, { type: chunks[0].type || 'audio/webm' })) : null; res({ transcript: (finalText + ' ' + interim).trim(), blobUrl, srOk, srError: srLastError, peak }); };
+        if (rec) { try { rec.stop(); } catch (e) {} }
+        recP.then(() => { if (recorder && recorder.state !== 'inactive') { recorder.onstop = () => setTimeout(finish, 150); recorder.stop(); } else finish(); });
+        setTimeout(finish, 2500);
+      });
+    }
+  };
+}
+function captureProblem(r) {
+  // human-readable explanation of why a capture produced nothing
+  if (lastMicError) return '麥克風無法開啟：' + lastMicError + (micPolicyAllowed() === false ? '（外層框架封鎖麥克風，請用「用麥克風模式開啟」）' : '');
+  if (r.srError && SR_MSG[r.srError]) return '語音辨識錯誤（' + r.srError + '）：' + SR_MSG[r.srError];
+  if (r.srError) return '語音辨識錯誤：' + r.srError;
+  if (!r.srOk) return '這個瀏覽器沒有語音辨識功能，請聽自己的錄音手動輸入';
+  if (r.peak != null && r.peak < 0.01) return '麥克風有開啟但幾乎沒有收到聲音（音量峰值 ' + r.peak.toFixed(3) + '），請檢查系統選到的輸入裝置、是否靜音，或離麥克風近一點';
+  if (!r.transcript) return '有收到聲音但辨識不出文字，請說大聲、清楚一點，或檢查設定裡的辨識語言';
+  return '';
+}
+let srDenied = false;
+let lastMicError = '';
+const _getMic = getMic;
+getMic = async function () { try { return await _getMic(); } catch (e) { lastMicError = (e && (e.name + ': ' + e.message)) || String(e); throw e; } };
+
+/* ===== mic diagnostics + mic mode (open top-level when the host frame blocks the microphone) ===== */
+const IN_FRAME = (() => { try { return window.top !== window.self; } catch (e) { return true; } })();
+function micPolicyAllowed() {
+  try { const p = document.permissionsPolicy || document.featurePolicy; if (p && p.allowsFeature) return p.allowsFeature('microphone'); } catch (e) {}
+  return null;
+}
+const MIC_PAYLOAD = (() => { try { const m = location.hash.match(/^#mic=(.+)$/); return m ? JSON.parse(decodeURIComponent(m[1])) : null; } catch (e) { return null; } })();
+const STANDALONE = !IN_FRAME;
+const MIC_MODE = false;
+function micModeUrl(sets) {
+  const base = location.href.split('#')[0];
+  return base + '#mic=' + encodeURIComponent(JSON.stringify(Object.assign({ srLang: S.srLang, level: S.level }, sets)));
+}
+function micBlocked() { return IN_FRAME && micPolicyAllowed() === false; }
+function micBanner(kind) {
+  const bar = $(kind + 'MicBar'); if (!bar) return;
+  const allowed = micPolicyAllowed();
+  if (MIC_MODE) { bar.hidden = false; bar.innerHTML = '<b>麥克風版。</b>這個頁面可以錄音與語音辨識，但沒有 AI。先貼上 claude.ai 給的題組代碼載入題目；做完後把「結果代碼」複製回 claude.ai 的頁面貼上就能評分與記錄。'; return; }
+  if (IN_FRAME && allowed === false) { bar.hidden = false; bar.innerHTML = '<b>這個瀏覽器把麥克風擋住了。</b>按「按住說話」會再試一次，若還是打不開就直接在下面的框打字，或在手機上用鍵盤的麥克風按鈕講，比對與評分完全一樣。'; return; }
+  if (lastMicError) { bar.hidden = false; bar.innerHTML = '<b>麥克風錯誤：</b>' + esc(lastMicError) + '。若是 NotAllowedError，請在網址列左邊的鎖頭圖示允許麥克風；或改用「用麥克風模式開啟」。'; return; }
+  bar.hidden = true;
+}
+function copyText(t, btn) { const done = () => { if (btn) { const o = btn.textContent; btn.textContent = '已複製'; setTimeout(() => btn.textContent = o, 1500); } }; if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done, () => {}); else { const ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); done(); } catch (e) {} ta.remove(); } }
+
+/* ===== word diff (LCS) ===== */
+function tokens(s) { return String(s || '').toLowerCase().replace(/[’']/g, "'").replace(/[^a-z0-9' ]+/g, ' ').split(/\s+/).filter(Boolean); }
+function wordDiff(target, said) {
+  const a = tokens(target), b = tokens(said);
+  const n = a.length, m = b.length, L = Array.from({ length: n + 1 }, () => new Array(m + 1).fill(0));
+  for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--) L[i][j] = a[i] === b[j] ? L[i + 1][j + 1] + 1 : Math.max(L[i + 1][j], L[i][j + 1]);
+  const out = []; let i = 0, j = 0, hit = 0;
+  while (i < n && j < m) { if (a[i] === b[j]) { out.push({ w: a[i], t: 'ok' }); i++; j++; hit++; } else if (L[i + 1][j] >= L[i][j + 1]) { out.push({ w: a[i], t: 'miss' }); i++; } else { out.push({ w: b[j], t: 'extra' }); j++; } }
+  while (i < n) out.push({ w: a[i++], t: 'miss' }); while (j < m) out.push({ w: b[j++], t: 'extra' });
+  const acc = n ? hit / n : 0;
+  const extra = out.filter(x => x.t === 'extra').length;
+  let score = acc >= 0.97 && extra === 0 ? 5 : acc >= 0.85 ? 4 : acc >= 0.6 ? 3 : acc >= 0.3 ? 2 : acc > 0 ? 1 : 0;
+  return { out, acc, score, missed: out.filter(x => x.t === 'miss').map(x => x.w) };
+}
+function renderDiff(diff, el) { el.innerHTML = diff.out.map(x => '<span class="' + x.t + '">' + esc(x.w) + '</span>').join(' '); }
+
+/* ===== MCQ rendering ===== */
+function renderMCQ(container, questions, prefix) {
+  container.innerHTML = '';
+  questions.forEach((q, qi) => {
+    const d = document.createElement('div'); d.className = 'q';
+    d.innerHTML = '<div class="qt">' + (qi + 1) + '. ' + esc(q.question) + '</div>' + q.options.map((o, oi) => '<div class="opt" data-q="' + qi + '" data-o="' + oi + '"><span class="l">' + 'ABCD'[oi] + '</span><span>' + esc(o) + '</span></div>').join('') + '<div class="explain" hidden></div>';
+    container.appendChild(d);
+  });
+  container.onclick = e => { const o = e.target.closest('.opt'); if (!o || container.dataset.locked) return; container.querySelectorAll('.opt[data-q="' + o.dataset.q + '"]').forEach(x => x.classList.remove('sel')); o.classList.add('sel'); };
+}
+function gradeMCQ(container, questions) {
+  let right = 0; container.dataset.locked = '1';
+  questions.forEach((q, qi) => {
+    const sel = container.querySelector('.opt[data-q="' + qi + '"].sel');
+    const ans = typeof q.answer === 'number' ? q.answer : 'ABCD'.indexOf(String(q.answer).trim().toUpperCase()[0]);
+    container.querySelectorAll('.opt[data-q="' + qi + '"]').forEach(o => { const oi = +o.dataset.o; if (oi === ans) o.classList.add('right'); else if (o.classList.contains('sel')) o.classList.add('wrong'); });
+    if (sel && +sel.dataset.o === ans) right++;
+    const ex = container.children[qi].querySelector('.explain'); if (ex && q.explanation) { ex.hidden = false; ex.textContent = q.explanation; }
+  });
+  return right;
+}
+
+/* ===== dashboard ===== */
+function daysBetween(a, b) { return Math.round((new Date(b) - new Date(a)) / 86400000); }
+function renderHome() {
+  const t = todayKey(), d = day(t);
+  const dayN = daysBetween(S.start, t) + 1;
+  $('stDay').innerHTML = (dayN > 0 ? dayN : 0) + '<small>/' + PLAN_DAYS + '</small>';
+  const ex = daysBetween(t, S.exam); $('stExam').innerHTML = ex + '<small> 天</small>';
+  const done = BLOCKS.filter(b => blockDone(b, d)).length;
+  $('stDone').innerHTML = done + '<small>/' + BLOCKS.length + '</small>';
+  $('homeBar').style.width = Math.round(done / BLOCKS.length * 100) + '%';
+  let streak = 0; for (let i = 0; i < 400; i++) { const k = new Date(Date.now() - i * 86400000); const kk = k.getFullYear() + '-' + String(k.getMonth() + 1).padStart(2, '0') + '-' + String(k.getDate()).padStart(2, '0'); const dd = S.days[kk]; const any = dd && Object.values(dd).some(v => v && v.done); if (any) streak++; else if (i > 0) break; }
+  $('stStreak').innerHTML = streak + '<small> 天</small>';
+  const wd = new Date().getDay(); const names = ['日', '一', '二', '三', '四', '五', '六'];
+  $('todayDate').textContent = t + '（週' + names[wd] + '）'; $('satNote').hidden = wd !== 6;
+  const left = BLOCKS.filter(b => !blockDone(b, d)).reduce((a, b) => a + b.min, 0);
+  const wk = Math.max(1, Math.ceil(dayN / 7));
+  const phase = dayN <= 4 ? '校準期' : wk <= 3 ? '第 ' + wk + ' 週 · 機械能力總攻' : wk <= 6 ? '第 ' + wk + ' 週 · 速度與分流' : wk <= 9 ? '第 ' + wk + ' 週 · 實戰模擬與修補' : '第 ' + wk + ' 週 · 收尾';
+  $('homeSub').textContent = phase + '　今天還剩 ' + left + ' 分鐘。順序不要跳，A、B、C 是分數來源，累了也先做完它們。';
+  $('brandsub').textContent = '十一週作戰 · 每科目標 4.5 · 目前 ' + S.level;
+  const cl = $('checklist'); cl.innerHTML = '';
+  BLOCKS.forEach(b => {
+    const ok = blockDone(b, d), row = document.createElement('div'); row.className = 'task' + (ok ? ' done' : '');
+    const sc = blockKeys(b).map(k => d[k] && d[k].score != null ? d[k].score : null).filter(x => x !== null);
+    row.innerHTML = '<div class="box" data-b="' + b.id + '">' + (ok ? '✓' : '') + '</div>'
+      + '<div><div class="t"><span class="mono" style="color:var(--muted)">' + b.id + '</span>　' + esc(b.t)
+      + (sc.length ? ' <span class="pill acc">' + sc.map(esc).join(' · ') + '</span>' : '')
+      + (!ok && blockProgress(b, d) !== '0/' + ((b.all || []).length + (b.any ? 1 : 0)) ? ' <span class="pill warn">' + blockProgress(b, d) + '</span>' : '')
+      + '</div><div class="d">' + esc(b.d) + ' · ' + b.min + ' 分</div></div>'
+      + '<div class="act"><button class="btn ghost sm" data-go="' + b.go + '">開始</button></div>';
+    cl.appendChild(row);
+  });
+  cl.onclick = e => {
+    const g = e.target.closest('[data-go]'); if (g) { go(g.dataset.go); return; }
+    const box = e.target.closest('.box'); if (!box) return;
+    const b = BLOCKS.find(x => x.id === box.dataset.b); if (!b) return;
+    if (blockDone(b, d)) { blockKeys(b).forEach(k => { if (d[k] && d[k].manual) delete d[k]; }); }
+    else { (b.all || []).forEach(k => { if (!d[k]) d[k] = { done: true, score: null, at: Date.now(), manual: true }; }); if (b.any && !b.any.some(k => d[k] && d[k].done)) d[b.any[0]] = { done: true, score: null, at: Date.now(), manual: true }; }
+    persist(); refreshPills();
+  };
+  const recent = Object.keys(S.days).sort().reverse().slice(0, 7);
+  const sp = recent.map(k => { const v = S.days[k]; const a = []; if (v.lr && v.lr.score != null) a.push('L&R ' + v.lr.score); if (v.iv && v.iv.score != null) a.push('Interview ' + v.iv.score); return a.length ? k.slice(5) + '　' + a.join('　') : null; }).filter(Boolean);
+  $('homeSpeak').innerHTML = sp.length ? sp.map(esc).join('<br>') : '還沒有紀錄';
+  const wr = recent.map(k => { const v = S.days[k]; const a = []; if (v.cw && v.cw.score != null) a.push('Words ' + v.cw.score); if (v.cr && v.cr.score != null) a.push('Response ' + v.cr.score); return a.length ? k.slice(5) + '　' + a.join('　') : null; }).filter(Boolean);
+  $('homeWrite').innerHTML = wr.length ? wr.map(esc).join('<br>') : '還沒有紀錄';
+}
+function refreshPills() {
+  const d = day();
+  TASKS.forEach(x => { const p = $(x.k + 'Pill'); if (p) { const ok = d[x.k] && d[x.k].done; p.textContent = ok ? '今日完成' + (d[x.k].score != null ? ' · ' + d[x.k].score : '') : '今日未完成'; p.className = 'pill' + (ok ? ' good' : ''); } const dot = document.querySelector('.dot[data-k="' + x.k + '"]'); if (dot) dot.classList.toggle('done', !!(d[x.k] && d[x.k].done)); });
+}
+
+/* ===== log / vocab / resources / settings ===== */
+function renderLog() {
+  const tb = $('logTable').querySelector('tbody'); tb.innerHTML = '';
+  Object.keys(S.days).sort().reverse().forEach(k => { const v = S.days[k]; const c = key => v[key] && v[key].done ? (v[key].score != null ? esc(v[key].score) : '✓') : '<span class="muted">–</span>'; tb.innerHTML += '<tr><td class="mono">' + k + '</td><td>' + c('lr') + '</td><td>' + c('iv') + '</td><td>' + c('bs') + '</td><td>' + c('em') + '</td><td>' + c('ad') + '</td><td>' + c('cw') + '</td><td>' + c('rd') + '</td><td>' + c('ls') + '</td></tr>'; });
+  const mt = $('mkTable').querySelector('tbody'); mt.innerHTML = '';
+  S.mocks.slice().sort((a, b) => b.date.localeCompare(a.date)).forEach((m, i) => { const tot = Math.round(((+m.r + +m.l + +m.s + +m.w) / 4) * 2) / 2; mt.innerHTML += '<tr><td class="mono">' + esc(m.date) + '</td><td>' + esc(m.r) + '</td><td>' + esc(m.l) + '</td><td>' + esc(m.s) + '</td><td>' + esc(m.w) + '</td><td><b>' + tot + '</b></td><td>' + esc(m.src) + '</td><td><button class="btn ghost sm" data-del="' + esc(m.id) + '">刪除</button></td></tr>'; });
+}
+$('mkAdd').onclick = () => { const v = k => $(k).value.trim(); if (!v('mkDate')) { alert('請填日期'); return; } S.mocks.push({ id: 'm' + Date.now(), date: v('mkDate'), r: v('mkR'), l: v('mkL'), s: v('mkS'), w: v('mkW'), src: v('mkSrc') }); persist(); renderLog(); };
+$('mkTable').onclick = e => { const b = e.target.closest('[data-del]'); if (b) { S.mocks = S.mocks.filter(m => m.id !== b.dataset.del); persist(); renderLog(); } };
+function renderVocab() { const tb = $('vbTable').querySelector('tbody'); tb.innerHTML = S.vocab.map((v, i) => '<tr><td><b>' + esc(v.w) + '</b></td><td class="muted">' + esc(v.src) + '</td><td class="mono muted">' + esc(v.d) + '</td><td><button class="btn ghost sm" data-i="' + i + '">刪除</button></td></tr>').join('') || '<tr><td colspan="4" class="muted">還沒有單字</td></tr>'; }
+$('vbTable').onclick = e => { const b = e.target.closest('[data-i]'); if (b) { S.vocab.splice(+b.dataset.i, 1); persist(); renderVocab(); } };
+$('vbAddBtn').onclick = () => { addVocab($('vbAdd').value, '手動'); $('vbAdd').value = ''; persist(); renderVocab(); };
+$('vbClear').onclick = () => { if (confirm('清空單字本？')) { S.vocab = []; persist(); renderVocab(); } };
+
+const RES = {
+  resEts: [
+    ['ETS TOEFL TestReady（免費官方練習題與模考）', 'https://www.ets.org/toefl/test-takers/ibt/prepare/toefl-testready.html', '註冊 ETS 帳號後可做官方免費模考，每週六用它或 TOEFLMock。'],
+    ['ETS 官方樣題', 'https://www.ets.org/toefl/test-takers/ibt/prepare/sample-test.html', '每種題型的正式範例，先做一次熟悉介面。'],
+    ['ETS 2026 測驗規格（PDF）', 'https://www.eu.ets.org/pdfs/toefl/toefl-ibt-test-specifications-2026.pdf', '題數、時間、評分方式的官方文件，本站出題依此對齊。'],
+    ['ETS 級分對照（1–6 與舊制、CEFR）', 'https://www.ets.org/toefl/institutions/ibt/score-scale-update.html', '5 分約等於舊制 95–106、CEFR C1。'],
+    ['ETS 成績查詢說明', 'https://www.ets.org/toefl/test-takers/ibt/scores/get-scores.html', '考後約 3 天在 ETS 帳號看到分數，報名前再確認一次。'],
+  ],
+  resMock: [
+    ['TOEFLMock 新制模考', 'https://www.toeflmocktests.com/practice-tests/listening/', '有多回新制全真模考與免費聽力題。'],
+    ['Magoosh 免費模考', 'https://magoosh.com/toefl/toefl-practice-test/', '閱讀聽力自適應，可單科施測，適合第一天診斷。'],
+    ['TST Prep 免費完整試題（PDF）', 'https://tstprep.com/articles/toefl/complete-practice-test-for-the-toefl-test/', '註冊後下載，一整回紙本版。'],
+    ['FluentPrep 模考與每日免費題', 'https://www.fluentprep.online/practice', '第一次完整模考免費，每科每天有免費題數。'],
+    ['Goarno 題庫（Complete the Words、聽力）', 'https://goarno.io/blog/complete-the-words-practice-questions-with-answers-toefl-new-format/', '額外補充題，附答案。'],
+  ],
+  resSpeak: [
+    ['MySpeakingScore', 'https://www.myspeakingscore.com/', '第一回 Listen and Repeat 與 Interview 免費評分，可選 ETS 同款引擎（付費）。考前兩三週買少量報告確認分數。'],
+    ['FluentPrep 口說練習', 'https://www.fluentprep.online/practice', '每天免費幾題附 AI 回饋，涵蓋 12 種題型。'],
+    ['MySpeakingScore 評分標準說明', 'https://www.myspeakingscore.com/blog/how-toefl-speaking-is-scored', '0–5 各級的描述，對照自己的錄音。'],
+  ],
+  resMedia: [
+    ['BBC 6 Minute English', 'https://www.bbc.co.uk/learningenglish/english/features/6-minute-english', '有逐字稿，最適合關字幕跟讀後對答案。英式口音。'],
+    ['TED Talks（開字幕與逐字稿）', 'https://www.ted.com/talks', '學術短講的聽力素材，挑 6–10 分鐘的。'],
+    ['NPR Up First', 'https://www.npr.org/podcasts/510318/up-first', '美式新聞口音，每集 10 幾分鐘。'],
+    ['Scientific American 60-Second Science', 'https://www.scientificamerican.com/podcasts/', '一分鐘科學短講，很像 Academic Talk。'],
+    ['影集建議', '', '選校園或職場對話多的劇，一集挑 30 秒片段：關字幕→每句暫停跟讀錄音→開字幕對照。'],
+  ]
+};
+function renderRes() { Object.keys(RES).forEach(id => { $(id).innerHTML = RES[id].map(r => '<div class="res"><div><div class="t">' + (r[1] ? '<a href="' + esc(r[1]) + '" target="_blank" rel="noopener">' + esc(r[0]) + '</a>' : esc(r[0])) + '</div><div class="d">' + esc(r[2]) + '</div></div></div>').join(''); }); }
+
+function renderSettings() {
+  $('setStart').value = S.start; $('setExam').value = S.exam; $('setLevel').value = S.level; $('setSrLang').value = S.srLang; $('setDictate').value = S.dictate || 'auto';
+  $('setAiMode').value = S.aiMode || 'auto'; $('setProxyUrl').value = S.proxyUrl || ''; $('setProxyKey').value = S.proxyKey || '';
+  const diag = [];
+  diag.push('語音播放：' + ('speechSynthesis' in window ? '支援（' + voices.filter(v => /^en/i.test(v.lang)).length + ' 個英文語音）' : '不支援'));
+  diag.push('語音辨識：' + (SR ? '支援' : '不支援（改為手動輸入逐字稿）'));
+  diag.push('錄音：' + (navigator.mediaDevices && window.MediaRecorder ? '支援' : '不支援'));
+  const pol = micPolicyAllowed(); diag.push('麥克風權限（外層框架）：' + (pol === null ? '無法判斷' : pol ? '允許' : '被封鎖，請用口說頁面的「用麥克風模式開啟」'));
+  diag.push('頁面位置：' + (IN_FRAME ? '內嵌框架（claude.ai 之內）' : '獨立分頁') + '　網址主機：' + location.host);
+  if (lastMicError) diag.push('最近一次麥克風錯誤：' + lastMicError);
+  if (srLastError) diag.push('最近一次語音辨識錯誤：' + srLastError + (SR_MSG[srLastError] ? '，' + SR_MSG[srLastError] : ''));
+  diag.push('口說作答方式：' + (dictating() ? '鍵盤聽寫（不需要麥克風權限）' : '麥克風錄音'));
+  diag.push('AI 管道：' + aiBackend() + (S.proxyUrl ? '（' + S.proxyUrl + '）' : ''));
+  diag.push('雲端同步：' + (db ? '已連線（進度會跨裝置同步）' : '未連線（只存在這個瀏覽器）'));
+  $('setDiag').innerHTML = diag.map(esc).join('<br>');
+}
+$('setSave').onclick = () => { S.start = $('setStart').value || S.start; S.exam = $('setExam').value || S.exam; S.level = $('setLevel').value; S.srLang = $('setSrLang').value; S.dictate = $('setDictate').value; S.aiMode = $('setAiMode').value; S.proxyUrl = $('setProxyUrl').value.trim().replace(/\/$/, ''); S.proxyKey = $('setProxyKey').value.trim(); persist(); aiPill(); setStatus($('setStatus'), '已儲存'); };
+$('setReset').onclick = () => { if (confirm('確定清除所有紀錄？無法復原。')) { S = JSON.parse(JSON.stringify(DEFAULT_STATE)); persist(); renderAll(); } };
+$('setProxyTest').onclick = async () => {
+  const out = $('setProxyOut'); const url = $('setProxyUrl').value.trim();
+  if (!url) { out.textContent = '請先填管道網址'; return; }
+  out.textContent = '測試中…';
+  const save = S.proxyUrl, saveK = S.proxyKey;
+  S.proxyUrl = url.replace(/\/$/, ''); S.proxyKey = $('setProxyKey').value.trim();
+  try { const r = await askProxy('Reply with only this JSON and nothing else: {"ok": true, "hello": "world"}'); out.textContent = r && r.ok ? '管道正常' : '有回應但格式不對：' + JSON.stringify(r).slice(0, 80); }
+  catch (e) { out.textContent = '失敗：' + (e.code || '') + ' ' + (e.message || ''); S.proxyUrl = save; S.proxyKey = saveK; }
+};
+$('setTestMic').onclick = async () => { const out = $('setTestOut'); out.textContent = '請說一句英文（5 秒）…'; try { await getMic(); const cap = startCapture(t => out.textContent = '聽到：' + t, $('setMeter')); await new Promise(r => setTimeout(r, 5000)); const r = await cap.stop(); const prob = captureProblem(r); out.textContent = (r.transcript ? '辨識結果：' + r.transcript : '沒有辨識到文字') + '　音量峰值 ' + (r.peak != null ? r.peak.toFixed(3) : '–') + (r.blobUrl ? '　錄音正常' : '　錄音失敗') + (prob ? '\n問題：' + prob : ''); renderSettings(); } catch (e) { out.textContent = '麥克風無法使用：' + (e.name ? e.name + ' ' : '') + (e.message || e) + (micPolicyAllowed() === false ? '（外層框架封鎖麥克風，請用麥克風模式）' : ''); renderSettings(); } };
+$('setTestTts').onclick = () => { loadVoices(); speak('This is a test of the listening audio. Please make sure you can hear this clearly.', { lang: 'en-US' }); };
+
+function renderAll() { renderHome(); refreshPills(); renderLog(); renderVocab(); renderErr(); renderRes(); renderSettings(); }
+</script>
+<script>
+/* ===== shared prompt preamble ===== */
+function pre() { return 'You are an ETS TOEFL iBT (2026 new format, 1-6 band scale) item writer. The test taker is currently around band ' + S.level + ' (' + (LEVEL_DESC[S.level] || 'B2') + ') and is aiming for band 5 (CEFR C1). Write items at the difficulty of a real test at band ' + targetLevel() + ' level, in natural North American English unless told otherwise. Never reuse the example given below verbatim; produce fresh content. Reply with ONLY the JSON requested, no commentary.'; }
+function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function wc(s) { return (String(s).trim().match(/[A-Za-z0-9'’-]+/g) || []).length; }
+function fbHTML(obj) {
+  // obj: {sections:[{h, body}]} or string
+  if (typeof obj === 'string') return esc(obj);
+  return (obj || []).map(s => '<h4>' + esc(s.h) + '</h4>' + esc(s.body)).join('');
+}
+function scoreTiles(el, items) { el.innerHTML = items.map(i => '<div class="s"><div class="score">' + esc(i.v) + '</div>' + esc(i.k) + '</div>').join(''); }
+
+
+/* ===== push to talk ===== */
+let micDead = false;
+function wireTalk(btn, cfg) {
+  // cfg: { label, seconds(), timer, meter, onInterim(t), onDone(result), onFail(msg), onStart() }
+  let active = false, pressAt = 0, cap = null;
+  const tx = btn.querySelector('.tx');
+  btn.dataset.state = 'idle';
+  async function start() {
+    if (active) return;
+    if (cfg.useTyping && cfg.useTyping()) { cfg.onTyping(); return; }
+    active = true; btn.dataset.state = 'live'; btn.classList.add('live'); tx.textContent = '錄音中，放開結束';
+    try { await getMic(); } catch (e) {
+      active = false; btn.classList.remove('live'); btn.dataset.state = 'idle'; tx.textContent = cfg.label;
+      micDead = true;
+      cfg.onFail('麥克風打不開（' + (e && e.name ? e.name : 'error') + '）。這一題改用打字，下面的框可以直接輸入，手機用鍵盤上的麥克風按鈕講也可以。');
+      return;
+    }
+    cap = startCapture(cfg.onInterim, cfg.meter);
+    cfg.onStart && cfg.onStart();
+    if (cfg.timer) cfg.timer.start(cfg.seconds());
+  }
+  async function stop() {
+    if (!active) return;
+    active = false; btn.classList.remove('live'); btn.dataset.state = 'idle'; tx.textContent = cfg.label;
+    if (cfg.timer) cfg.timer.stop();
+    if (!cap) return;
+    const c = cap; cap = null;
+    const r = await c.stop();
+    cfg.onDone(r);
+  }
+  btn.addEventListener('pointerdown', e => {
+    e.preventDefault();
+    pressAt = Date.now();
+    if (active) stop(); else start();
+  });
+  const up = () => { if (active && Date.now() - pressAt > 500) stop(); };
+  btn.addEventListener('pointerup', up);
+  btn.addEventListener('pointercancel', up);
+  btn.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); pressAt = 0; if (active) stop(); else start(); } });
+  return { start, stop, isActive: () => active, forceStop: stop, setLabel: t => { cfg.label = t; if (!active) tx.textContent = t; } };
+}
+
+/* ===== LISTEN & REPEAT ===== */
+const LR = { set: null, i: 0, cap: null, results: [], timer: null, blob: null };
+LR.timer = makeTimer($('lrTimer'), () => { if (!$('lrDictBox').hidden) { lrDictSubmit(); return; } if (typeof lrTalk !== 'undefined') lrTalk.forceStop(); });
+$('lrGen').onclick = () => {
+  if (aiBackend() === 'manual' && typeof LR_BANK !== 'undefined' && LR_BANK.length) {
+    const i = (S.bankLr || 0) % LR_BANK.length; S.bankLr = i + 1; persist();
+    const b = LR_BANK[i];
+    lrLoad({ scenario: b.e, scenario_zh: b.s, sentences: b.l });
+    setStatus($('lrStatus'), '用內建題庫第 ' + (i + 1) + ' / ' + LR_BANK.length + ' 組（不需要 AI）');
+    return;
+  }
+  lrGenerate();
+};
+async function lrGenerate() {
+  const lvl = $('lrLevel').value;
+  const r = await askJSON(pre() + '\n\nCreate ONE Listen and Repeat set for the TOEFL Speaking section. Pick a concrete setting where one speaker (a tour guide, museum docent, airline announcer, campus orientation leader, cooking instructor, gym trainer, etc.) addresses listeners. Write 7 sentences that this speaker would naturally say, in order, on the same topic. They must get progressively longer and more complex: sentence 1: 6-8 words; 2: 8-10; 3: 10-12; 4: 12-14; 5: 14-16; 6: 16-19; 7: 19-22 words. Use everyday spoken English at CEFR ' + ({ 3: 'B1', 4: 'B2', 5: 'C1' }[lvl]) + ' level with some contractions, numbers, times, or place names so repetition is realistic. Example style (do not copy): "Please, no outside food or drinks, and do not feed the animals."\nReply with JSON: {"scenario": "one sentence in English describing the setting, e.g. You are on a guided tour of a botanical garden. Listen to the guide.", "scenario_zh": "同一句的繁體中文", "sentences": ["...", "...", "...", "...", "...", "...", "..."]}', $('lrStatus')).catch(() => null);
+  if (!r || !Array.isArray(r.sentences) || r.sentences.length < 7) { if (r) setStatus($('lrStatus'), '題組格式不完整，請再按一次', true); return; }
+  lrLoad(r);
+}
+function lrLoad(r) {
+  LR.set = r; LR.i = 0; LR.results = [];
+  $('lrScene').hidden = false; $('lrScene').innerHTML = '<b>Scenario.</b> ' + esc(r.scenario) + '<br><span class="muted small">' + esc(r.scenario_zh || '') + '</span>';
+  $('lrStage').hidden = false; $('lrSummary').hidden = true; $('lrList').hidden = true; $('lrResult').hidden = true; $('lrTrans').textContent = ''; $('lrManual').hidden = true; $('lrCodeBox').hidden = true;
+  $('lrMicOpen').disabled = MIC_MODE;
+  lrShowCur();
+}
+$('lrMicOpen').onclick = () => { if (LR.set) window.open(micModeUrl({ lr: LR.set, iv: IV.set || undefined }), '_blank'); };
+$('lrPasteBtn').onclick = () => { $('lrPasteBox').hidden = !$('lrPasteBox').hidden; };
+$('lrPasteGo').onclick = () => {
+  let d; try { d = JSON.parse($('lrPaste').value.trim()); } catch (e) { setStatus($('lrStatus'), '代碼格式不對，請整段複製再貼', true); return; }
+  if (!d || d.kind !== 'lr' || !d.set || !d.said) { setStatus($('lrStatus'), '這不是 Listen and Repeat 的結果代碼', true); return; }
+  lrLoad(d.set); LR.results = d.set.sentences.map((t, i) => { const w = wordDiff(t, d.said[i] || ''); return { target: t, said: d.said[i] || '', score: w.score, acc: w.acc, missed: w.missed }; });
+  $('lrPasteBox').hidden = true; $('lrStatus').textContent = ''; lrSummary();
+};
+$('lrCopy').onclick = () => copyText($('lrCode').value, $('lrCopy'));
+function lrShowCur() { if ($('lrDictBox')) $('lrDictBox').hidden = true; if ($('lrTalk')) $('lrTalk').disabled = true; if ($('lrRec')) $('lrRec').hidden = true; $('lrCur').textContent = '第 ' + (LR.i + 1) + ' 句 / 7　作答 ' + lrSec() + ' 秒'; $('lrPlay').disabled = false; $('lrReplay').disabled = true; $('lrResult').hidden = true; $('lrTrans').textContent = ''; $('lrTimer').textContent = lrSec(); $('lrTimer').classList.remove('low'); }
+function lrSec() { return LR.i < 2 ? 8 : LR.i < 5 ? 10 : 12; }
+$('lrPlay').onclick = async () => {
+  $('lrPlay').disabled = true; $('lrTrans').textContent = ''; $('lrManual').hidden = true; $('lrDictBox').hidden = true;
+  setStatus($('lrStatus'), '');
+  await speak(LR.set.sentences[LR.i], { lang: 'en-US' });
+  $('lrReplay').disabled = false;
+  lrArmTalk();
+};
+function typingMode() { return micDead || dictating(); }
+function lrArmTalk() {
+  $('lrTalk').disabled = false;
+  lrTalk.setLabel(typingMode() ? '開始作答（用鍵盤講）' : '按住說話');
+  $('lrTalkHint').textContent = typingMode()
+    ? '這台裝置的瀏覽器不開放網頁錄音，改用鍵盤聽寫。按下去之後點進輸入框，再按鍵盤上的麥克風圖示講出剛才那句話，計時一樣跑。'
+    : '按住這顆按鈕開始講，放開就對答案。也可以點一下開始、再點一下結束。';
+  $('lrTimer').textContent = lrSec();
+  setStatus($('lrStatus'), '');
+}
+function lrTypeMode() {
+  $('lrDictBox').hidden = false; $('lrDictIn').value = ''; $('lrDictIn').focus();
+  $('lrTalk').disabled = true;
+  setStatus($('lrStatus'), '點進框裡，按鍵盤上的麥克風圖示開始講');
+  LR.timer.start(lrSec());
+}
+function lrDictSubmit() {
+  if ($('lrDictBox').hidden) return;
+  LR.timer.stop(); const said = $('lrDictIn').value; $('lrDictBox').hidden = true;
+  $('lrTrans').textContent = said || '（沒有輸入）';
+  lrScore(said);
+}
+$('lrDictGo').onclick = () => lrDictSubmit();
+function micRetry() { micDead = false; srFatal = false; srDenied = false; srLastError = ''; lastMicError = ''; mediaStream = null; }
+$('lrMicRetry').onclick = () => { micRetry(); S.dictate = 'off'; persist(); $('lrDictBox').hidden = true; LR.timer.stop(); lrArmTalk(); setStatus($('lrStatus'), '已切回麥克風，按住下面的按鈕試試看'); };
+const lrTalk = wireTalk($('lrTalk'), {
+  label: '按住說話',
+  useTyping: () => typingMode(),
+  onTyping: () => lrTypeMode(),
+  seconds: lrSec,
+  timer: LR.timer,
+  meter: $('lrMeter'),
+  onStart: () => { $('lrRec').hidden = false; setStatus($('lrStatus'), ''); },
+  onInterim: t => { $('lrTrans').textContent = t; },
+  onFail: msg => { setStatus($('lrStatus'), msg, true); lrTypeMode(); },
+  onDone: r => lrFinish(r)
+});
+$('lrStop').onclick = () => lrTalk.forceStop();
+$('lrReplay').onclick = () => speak(LR.set.sentences[LR.i], { lang: 'en-US' });
+async function lrFinish(r) {
+  $('lrRec').hidden = true; $('lrTalk').disabled = true;
+  $('lrTrans').textContent = r.transcript || (r.srOk ? '（沒有辨識到內容）' : '');
+  const a = $('lrAudio'); if (r.blobUrl) { a.src = r.blobUrl; a.hidden = false; } else a.hidden = true;
+  const prob = captureProblem(r);
+  if (!r.transcript) {
+    if (prob) setStatus($('lrStatus'), prob, true);
+    if (srFatal || !r.srOk) micDead = true;
+    $('lrManual').hidden = false; $('lrManualIn').value = ''; $('lrManualIn').focus();
+    return;
+  }
+  setStatus($('lrStatus'), '');
+  lrScore(r.transcript);
+}
+$('lrManualBtn').onclick = () => { lrScore($('lrManualIn').value); $('lrManual').hidden = true; };
+function lrScore(said) {
+  const target = LR.set.sentences[LR.i];
+  const d = wordDiff(target, said);
+  LR.results[LR.i] = { target, said, score: d.score, acc: d.acc, missed: d.missed };
+  renderDiff(d, $('lrDiff'));
+  const p = $('lrScore'); p.textContent = d.score + ' / 5　（字詞正確率 ' + Math.round(d.acc * 100) + '%）'; p.className = 'pill ' + (d.score >= 4 ? 'good' : d.score >= 3 ? 'warn' : 'bad');
+  $('lrResult').hidden = false; $('lrNext').textContent = LR.i >= 6 ? '看本回結果 →' : '下一句 →';
+}
+$('lrNext').onclick = () => { if (LR.i >= 6) { lrSummary(); return; } LR.i++; lrShowCur(); };
+async function lrSummary() {
+  $('lrStage').hidden = true; $('lrList').hidden = false; $('lrSummary').hidden = false;
+  const rs = LR.results.filter(Boolean); const avg = rs.length ? rs.reduce((s, x) => s + x.score, 0) / rs.length : 0;
+  LR.avg = Math.round(avg * 10) / 10;
+  $('lrTotal').textContent = '平均 ' + LR.avg + ' / 5';
+  $('lrList').innerHTML = LR.set.sentences.map((s, i) => { const r = LR.results[i]; return '<div class="sent"><span class="n">' + (i + 1) + '</span><div><div>' + esc(s) + '</div><div class="small muted">你說：' + esc(r ? r.said || '（無）' : '（未作答）') + '</div></div><span class="sc">' + (r ? r.score : '–') + '</span></div>'; }).join('');
+  const missed = [].concat(...rs.map(r => r.missed)); const freq = {}; missed.forEach(w => freq[w] = (freq[w] || 0) + 1);
+  const top = Object.keys(freq).sort((a, b) => freq[b] - freq[a]).slice(0, 8);
+  let fb = '漏掉最多的字：' + (top.length ? top.join('、') : '無') + '。\n';
+  const longDrop = rs.length >= 7 && (rs[5].score + rs[6].score) / 2 < (rs[0].score + rs[1].score) / 2 - 1;
+  fb += longDrop ? '長句（第 6–7 句）明顯掉分，代表短期記憶容量是瓶頸。練法：聽的時候抓「意群」而不是逐字，先記住句子的骨架（誰、做什麼、何時何地），再把細節塞回去。\n' : '長短句表現差不多，接下來把難度調高一級，或把語速調快。\n';
+  if (missed.some(w => /^(the|a|an|to|of|in|at|on|and|is|are|be)$/.test(w))) fb += '漏掉的字裡有不少功能詞（冠詞、介系詞、be 動詞），ETS 的 AI 評分會逐字比對，這些不能省。\n';
+  $('lrFeedback').textContent = fb;
+  top.forEach(w => { if (w.length > 3) addVocab(w, 'Listen & Repeat 漏字'); });
+  if (MIC_MODE) { $('lrCodeBox').hidden = false; $('lrCode').value = JSON.stringify({ kind: 'lr', set: LR.set, said: LR.set.sentences.map((s, i) => LR.results[i] ? LR.results[i].said : '') }); $('lrSave').hidden = true; $('lrAgain').hidden = true; }
+}
+$('lrSave').onclick = () => { markDone('lr', LR.avg, { detail: LR.results.map(r => r ? r.score : null) }); setStatus($('lrStatus'), '已記錄'); go('home'); };
+$('lrAgain').onclick = () => $('lrGen').click();
+
+/* ===== INTERVIEW ===== */
+const IV = { set: null, i: 0, cap: null, answers: [], timer: null, audio: [] };
+IV.timer = makeTimer($('ivTimer'), () => { if (typeof ivTalk !== 'undefined' && ivTalk.isActive()) { ivTalk.forceStop(); return; } IV.answers[IV.i] = $('ivTrans').value.trim(); ivShow(); });
+$('ivGen').onclick = () => {
+  if (aiBackend() === 'manual' && typeof IV_BANK !== 'undefined' && IV_BANK.length) {
+    const i = (S.bankIv || 0) % IV_BANK.length; S.bankIv = i + 1; persist();
+    const b = IV_BANK[i];
+    ivLoad({ topic: b.t, intro: 'Let me ask you a few questions about ' + b.t + '.', questions: b.q }, true);
+    setStatus($('ivStatus'), '用內建題庫第 ' + (i + 1) + ' / ' + IV_BANK.length + ' 組（不需要 AI）');
+    return;
+  }
+  ivGenerate();
+};
+async function ivGenerate() {
+  const topic = $('ivTopic').value.trim();
+  const r = await askJSON(pre() + '\n\nCreate ONE Take an Interview set for the TOEFL Speaking section. ' + (topic ? 'Topic: ' + topic + '.' : 'Choose a familiar everyday or campus-life topic (e.g. commuting, food and cooking, study habits, technology use, weekend activities, neighborhoods, travel, hobbies, work experience).') + ' Write 4 interviewer questions in a natural, friendly interview flow: question 1 is a simple opener about the test taker\'s own situation; questions 2-4 build on the topic and require description, explanation, opinion, comparison, suggestion, or prediction (e.g. "Describe a situation when...", "What\'s your general attitude toward...", "Do you think ... will change in the future? Why?"). Each question should be answerable in 45 seconds by a band 4-5 speaker. Example style (do not copy): "Now, do you currently live in a big city, a small town, or a village?"\nReply with JSON: {"topic": "...", "intro": "one-sentence interviewer intro, e.g. Hi, thanks for joining us today. I\'d like to ask you a few questions about ...", "questions": ["...", "...", "...", "..."]}', $('ivStatus')).catch(() => null);
+  if (!r || !Array.isArray(r.questions) || r.questions.length < 4) return;
+  ivLoad(r, !MIC_MODE && !micBlocked());
+}
+function ivLoad(r, sayIntro) {
+  IV.set = r; IV.i = 0; IV.answers = [null, null, null, null]; IV.audio = [];
+  $('ivStage').hidden = false; $('ivResult').hidden = true; $('ivCodeBox').hidden = true; $('ivMicOpen').disabled = MIC_MODE; ivShow();
+  if (sayIntro) speak(r.intro || 'Thanks for joining us. I would like to ask you a few questions.', { lang: 'en-US' });
+}
+$('ivMicOpen').onclick = () => { if (IV.set) window.open(micModeUrl({ iv: IV.set, lr: LR.set || undefined }), '_blank'); };
+$('ivPasteBtn').onclick = () => { $('ivPasteBox').hidden = !$('ivPasteBox').hidden; };
+$('ivPasteGo').onclick = () => {
+  let d; try { d = JSON.parse($('ivPaste').value.trim()); } catch (e) { setStatus($('ivStatus'), '代碼格式不對，請整段複製再貼', true); return; }
+  if (!d || d.kind !== 'iv' || !d.set || !d.answers) { setStatus($('ivStatus'), '這不是 Interview 的結果代碼', true); return; }
+  ivLoad(d.set, false); IV.answers = d.answers.map(x => x || ''); IV.i = 0; ivShow(); $('ivPasteBox').hidden = true; setStatus($('ivStatus'), '已載入四題答案，可以送出評分');
+};
+$('ivCopy').onclick = () => copyText($('ivCode').value, $('ivCopy'));
+function ivShow() {
+  if (MIC_MODE && IV.answers.every(x => x && x.trim())) { $('ivCodeBox').hidden = false; $('ivCode').value = JSON.stringify({ kind: 'iv', set: IV.set, answers: IV.answers }); }
+  $('ivTabs').innerHTML = IV.set.questions.map((q, i) => '<button data-i="' + i + '" class="' + (i === IV.i ? 'on' : '') + '">Q' + (i + 1) + (IV.answers[i] ? ' ✓' : '') + '</button>').join('');
+  $('ivQ').textContent = 'Q' + (IV.i + 1) + '. ' + IV.set.questions[IV.i];
+  $('ivTrans').value = IV.answers[IV.i] || ''; $('ivTimer').textContent = '45'; $('ivTimer').classList.remove('low'); $('ivStart').disabled = false; if ($('ivTalk')) $('ivTalk').disabled = true; if ($('ivRec')) $('ivRec').hidden = true;
+  const a = $('ivAudio'); if (IV.audio[IV.i]) { a.src = IV.audio[IV.i]; a.hidden = false; } else a.hidden = true;
+  $('ivGrade').disabled = MIC_MODE || !IV.answers.every(x => x && x.trim());
+  if (MIC_MODE) $('ivGrade').textContent = '評分請回 claude.ai 頁面貼上結果代碼';
+}
+$('ivTabs').onclick = e => { const b = e.target.closest('button'); if (b) { IV.i = +b.dataset.i; ivShow(); } };
+$('ivStart').onclick = async () => {
+  $('ivStart').disabled = true; $('ivTrans').value = ''; setStatus($('ivStatus'), '');
+  await speak(IV.set.questions[IV.i], { lang: 'en-US' });
+  $('ivStart').disabled = false;
+  ivArmTalk();
+};
+function ivArmTalk() {
+  $('ivTalk').disabled = false;
+  ivTalk.setLabel(typingMode() ? '開始作答（用鍵盤講，45 秒）' : '按住說話（45 秒）');
+  $('ivTalkHint').textContent = typingMode()
+    ? '這台裝置的瀏覽器不開放網頁錄音，改用鍵盤聽寫。按下去之後點進逐字稿框，再按鍵盤上的麥克風圖示講，45 秒計時一樣跑。'
+    : '按住這顆按鈕作答，放開結束。也可以點一下開始、再點一下結束。';
+  $('ivMicRetry').hidden = !typingMode();
+  $('ivTimer').textContent = '45';
+  setStatus($('ivStatus'), '');
+}
+function ivTypeMode() {
+  $('ivTalk').disabled = true; $('ivTrans').focus();
+  setStatus($('ivStatus'), '點進逐字稿框，按鍵盤上的麥克風圖示開始講，45 秒');
+  IV.timer.start(45);
+}
+const ivTalk = wireTalk($('ivTalk'), {
+  label: '按住說話（45 秒）',
+  useTyping: () => typingMode(),
+  onTyping: () => ivTypeMode(),
+  seconds: () => 45,
+  timer: IV.timer,
+  meter: $('ivMeter'),
+  onStart: () => { $('ivRec').hidden = false; setStatus($('ivStatus'), ''); },
+  onInterim: t => { $('ivTrans').value = t; },
+  onFail: msg => { setStatus($('ivStatus'), msg, true); $('ivTrans').focus(); IV.timer.start(45); },
+  onDone: r => ivStop(r)
+});
+$('ivDone').onclick = () => ivTalk.forceStop();
+$('ivMicRetry').onclick = () => { micRetry(); S.dictate = 'off'; persist(); IV.timer.stop(); ivArmTalk(); setStatus($('ivStatus'), '已切回麥克風，按住下面的按鈕試試看'); };
+async function ivStop(r) {
+  $('ivRec').hidden = true; $('ivTalk').disabled = true;
+  if (r) {
+    if (r.transcript) $('ivTrans').value = r.transcript;
+    if (r.blobUrl) { IV.audio[IV.i] = r.blobUrl; $('ivAudio').src = r.blobUrl; $('ivAudio').hidden = false; }
+    const prob = captureProblem(r);
+    if (!r.transcript) { if (prob) setStatus($('ivStatus'), prob, true); if (srFatal || !r.srOk) micDead = true; $('ivTrans').focus(); }
+    else setStatus($('ivStatus'), '');
+  }
+  IV.answers[IV.i] = $('ivTrans').value.trim(); ivShow();
+}
+$('ivSaveQ').onclick = () => { IV.answers[IV.i] = $('ivTrans').value.trim(); if (IV.i < 3) IV.i++; ivShow(); };
+$('ivGrade').onclick = async () => {
+  IV.answers[IV.i] = $('ivTrans').value.trim();
+  const prompt = 'You are the ETS automated rater for the TOEFL iBT 2026 Speaking task "Take an Interview". Each answer was spoken in 45 seconds with no preparation; below are speech-recognition transcripts (so ignore punctuation and minor ASR artifacts; you cannot judge pronunciation, so score Clarity from sentence-level coherence and word choice, and say so). Score EACH answer 0-5 on four dimensions using the ETS rubric: Fluency (pace, pausing, hesitation markers, false starts), Clarity/Intelligibility, Language Use (range and accuracy of grammar and vocabulary), Organization/Topic Development (on topic, coherent, elaborated with reasons and examples). 5 = clear and fluent, fully on topic, well elaborated, wide accurate language; 4 = generally clear and developed with minor errors; 3 = limited elaboration, noticeable errors, simple vocabulary; 2 = short, disconnected, frequent errors; 1 = very little relevant content; 0 = none. Be strict like the real rater. Then estimate an overall Speaking band contribution (1-6 scale, half points allowed).\n\nTopic: ' + IV.set.topic + '\n' + IV.set.questions.map((q, i) => 'Q' + (i + 1) + ': ' + q + '\nAnswer ' + (i + 1) + ' (' + wc(IV.answers[i]) + ' words): ' + (IV.answers[i] || '(no answer)')).join('\n\n') + '\n\nReply with JSON: {"perQuestion": [{"fluency": n, "clarity": n, "language": n, "organization": n, "score": n, "comment_zh": "2-3 句繁體中文評語，指出具體問題並引用原句", "better": "an improved 45-second model answer in English (70-100 words) that keeps the test taker\'s own ideas"}, ... 4 items], "overall": n (0-5 average), "band": n (1-6), "summary_zh": "整體評語：最需要改的兩件事，繁體中文，4-6 句", "vocab": ["up to 6 useful words or phrases from the model answers"]}';
+  setStatus($('ivStatus'), 'AI 評分中（約 20–60 秒）…', false, true);
+  let r; try { r = await sample.json(prompt, { cache: false }); setStatus($('ivStatus'), ''); } catch (e) { setStatus($('ivStatus'), '評分失敗：' + (e.code || ''), true); return; }
+  if (!r || !r.perQuestion) { setStatus($('ivStatus'), '格式錯誤，請再送一次', true); return; }
+  IV.overall = Math.round((r.overall || r.perQuestion.reduce((s, x) => s + (+x.score || 0), 0) / 4) * 10) / 10;
+  $('ivBand').textContent = '平均 ' + IV.overall + ' / 5　估計級分 ' + (r.band || '–');
+  $('ivFeedback').innerHTML = r.perQuestion.map((x, i) => '<h4>Q' + (i + 1) + '　' + esc(x.score) + ' / 5　（流暢 ' + esc(x.fluency) + '　清晰 ' + esc(x.clarity) + '　語言 ' + esc(x.language) + '　組織 ' + esc(x.organization) + '）</h4>' + esc(x.comment_zh) + '<div class="note" style="margin-top:6px"><b>Model answer.</b> ' + esc(x.better) + '</div>').join('') + '<h4>整體</h4>' + esc(r.summary_zh);
+  (r.vocab || []).forEach(w => addVocab(w, 'Interview 模範答案'));
+  $('ivResult').hidden = false; $('ivResult').scrollIntoView({ behavior: 'smooth' });
+};
+$('ivSave').onclick = () => { markDone('iv', IV.overall); go('home'); };
+$('ivAgain').onclick = () => $('ivGen').click();
+
+/* ===== BUILD A SENTENCE ===== */
+const BS = { items: [], i: 0, built: [], pool: [], right: 0, timer: null };
+BS.timer = makeTimer($('bsTimer'), () => bsCheck(true));
+$('bsGen').onclick = async () => {
+  const r = await askJSON(pre() + '\n\nCreate 10 Build a Sentence items for the TOEFL Writing section. Each item: a one-line context describing who is talking to whom about what (e.g. "A student is asking her professor about an assignment deadline."), then ONE natural sentence or question (8-14 words) split into 5-7 chunks of 1-3 words each, in the correct order. Include a mix of statements, questions, and requests; cover grammar points such as word order in questions, modal verbs, phrasal verbs, relative clauses, and prepositions. Items 1-3 easy, 4-7 medium, 8-10 harder. The chunks must join with single spaces into the sentence exactly (put final punctuation inside the last chunk).\nReply with JSON: {"items": [{"context": "...", "chunks": ["I", "was thinking of", "studying", "at the library", "this weekend."]}, ... 10 items]}', $('bsStatus')).catch(() => null);
+  if (!r || !Array.isArray(r.items) || r.items.length < 5) return;
+  BS.items = r.items.slice(0, 10); BS.i = 0; BS.right = 0; $('bsStage').hidden = false; $('bsSummary').hidden = true; bsShow();
+};
+function bsShow() {
+  const it = BS.items[BS.i]; BS.built = []; BS.pool = shuffle(it.chunks.map((c, i) => ({ c, i })));
+  if (BS.pool.map(x => x.c).join(' ') === it.chunks.join(' ')) BS.pool.reverse();
+  $('bsCur').textContent = '第 ' + (BS.i + 1) + ' 題 / ' + BS.items.length; $('bsScoreLive').textContent = '答對 ' + BS.right; $('bsCtx').textContent = it.context; $('bsFb').innerHTML = ''; $('bsCheck').disabled = false;
+  bsRender(); BS.timer.start(35);
+}
+function bsRender() { $('bsBuilt').innerHTML = BS.built.map((x, i) => '<span class="chunk" data-b="' + i + '">' + esc(x.c) + '</span>').join('') || '<span class="muted small">點下方片語依序放進來</span>'; $('bsChunks').innerHTML = BS.pool.map((x, i) => '<span class="chunk" data-p="' + i + '">' + esc(x.c) + '</span>').join(''); }
+$('bsChunks').onclick = e => { const el = e.target.closest('[data-p]'); if (!el) return; BS.built.push(BS.pool.splice(+el.dataset.p, 1)[0]); bsRender(); };
+$('bsBuilt').onclick = e => { const el = e.target.closest('[data-b]'); if (!el) return; BS.pool.push(BS.built.splice(+el.dataset.b, 1)[0]); bsRender(); };
+$('bsUndo').onclick = () => { if (BS.built.length) { BS.pool.push(BS.built.pop()); bsRender(); } };
+$('bsCheck').onclick = () => bsCheck(false);
+function bsCheck(timeout) {
+  BS.timer.stop(); $('bsCheck').disabled = true;
+  const it = BS.items[BS.i]; const ans = it.chunks.join(' '); const mine = BS.built.map(x => x.c).join(' ');
+  const ok = mine === ans; if (ok) BS.right++;
+  $('bsFb').innerHTML = (ok ? '<span class="pill good">正確</span>' : '<span class="pill bad">' + (timeout ? '時間到' : '錯誤') + '</span>　正確答案：<b>' + esc(ans) + '</b>') + '<div style="margin-top:8px"><button class="btn sm" id="bsNext">' + (BS.i >= BS.items.length - 1 ? '看結果' : '下一題') + '</button></div>';
+  $('bsNext').onclick = () => { if (BS.i >= BS.items.length - 1) { $('bsStage').hidden = true; $('bsSummary').hidden = false; BS.score = BS.right + '/' + BS.items.length; $('bsTotal').textContent = '答對 ' + BS.score; } else { BS.i++; bsShow(); } };
+}
+$('bsSave').onclick = () => { markDone('bs', BS.score); go('home'); };
+
+/* ===== EMAIL ===== */
+const EM = { p: null, timer: null };
+EM.timer = makeTimer($('emTimer'), () => { setStatus($('emStatus'), '7 分鐘到，請送出批改'); });
+$('emGen').onclick = async () => {
+  const r = await askJSON(pre() + '\n\nCreate ONE "Write an Email" prompt for the TOEFL Writing section. Format exactly like ETS: a situation of 60-100 words explaining who the test taker is writing to and why (a landlord, a professor, a store manager, a coworker, a club organizer, a city office, etc.; vary between formal and semi-formal), followed by "In your email, you should:" and THREE bullet points, each a distinct communicative function (e.g. explain a problem, request information, make a suggestion, apologize and propose an alternative, thank and describe what you value). Example style (do not copy): "Your city library is planning to reduce its weekend opening hours... Write a reply that does three things: thank the director..., explain a problem..., and suggest an alternative."\nReply with JSON: {"situation": "...", "bullets": ["...", "...", "..."], "recipient": "e.g. Ms. Alvarez, the building manager", "register": "formal" or "semi-formal"}', $('emStatus')).catch(() => null);
+  if (!r || !r.bullets) return;
+  EM.p = r; $('emStage').hidden = false; $('emResult').hidden = true; $('emText').value = ''; $('emWc').textContent = '0 words'; $('emTimer').textContent = '7:00';
+  $('emPrompt').textContent = r.situation + '\n\nIn your email, you should:\n' + r.bullets.map(b => '• ' + b).join('\n') + '\n\nWrite 100–150 words. Recipient: ' + r.recipient + ' (' + r.register + ').';
+};
+$('emStart').onclick = () => { EM.timer.start(420); $('emText').focus(); };
+$('emText').oninput = () => $('emWc').textContent = wc($('emText').value) + ' words';
+$('emGrade').onclick = async () => {
+  EM.timer.stop(); const text = $('emText').value.trim(); if (wc(text) < 20) { setStatus($('emStatus'), '至少寫 20 個字再送出', true); return; }
+  const prompt = 'You are the ETS automated rater for the TOEFL iBT 2026 Writing task "Write an Email" (7 minutes, target 100-150 words). Score 0-5 strictly per the ETS rubric: 5 = all three bullet points addressed fully and purposefully, appropriate email conventions and tone for the recipient, wide and accurate language with only rare minor slips; 4 = all points addressed, generally appropriate tone, some errors that do not obscure meaning; 3 = points addressed unevenly or briefly, noticeable errors, limited range; 2 = one or more points missing, frequent errors that sometimes obscure meaning; 1 = mostly off task or very short; 0 = blank/copied.\n\nPROMPT:\n' + EM.p.situation + '\nIn your email, you should: ' + EM.p.bullets.join(' | ') + '\nRecipient: ' + EM.p.recipient + ' (' + EM.p.register + ')\n\nRESPONSE (' + wc(text) + ' words):\n' + text + '\n\nReply with JSON: {"score": n, "task": n, "tone": n, "language": n, "bullets_covered": [true/false, true/false, true/false], "feedback_zh": "繁體中文批改：先說三個要點各自有沒有回應到，再列出 3-6 個具體錯誤（引用原句→改正→一句說明），最後一句給下次的重點。用自然口語，不要條列符號以外的格式。", "corrected": "the same email corrected and lightly improved to a band-5 level, keeping the writer\'s ideas and length", "vocab": ["up to 6 useful words/phrases the writer should learn"]}';
+  setStatus($('emStatus'), 'AI 批改中（約 20–60 秒）…', false, true);
+  let r; try { r = await sample.json(prompt, { cache: false }); setStatus($('emStatus'), ''); } catch (e) { setStatus($('emStatus'), '批改失敗：' + (e.code || ''), true); return; }
+  if (!r || r.score == null) return;
+  EM.score = r.score;
+  scoreTiles($('emScores'), [{ k: '總分 /5', v: r.score }, { k: '任務完成', v: r.task }, { k: '語氣慣例', v: r.tone }, { k: '語言', v: r.language }]);
+  $('emFeedback').innerHTML = '<div>' + esc(r.feedback_zh) + '</div><h4>修改版</h4><div class="daily">' + esc(r.corrected) + '</div>';
+  (r.vocab || []).forEach(w => addVocab(w, 'Email 批改'));
+  $('emResult').hidden = false; $('emResult').scrollIntoView({ behavior: 'smooth' });
+};
+$('emSave').onclick = () => { markDone('em', EM.score); go('home'); };
+
+/* ===== ACADEMIC DISCUSSION ===== */
+const AD = { p: null, timer: null };
+AD.timer = makeTimer($('adTimer'), () => { setStatus($('adStatus'), '10 分鐘到，請送出批改'); });
+$('adGen').onclick = async () => {
+  const r = await askJSON(pre() + '\n\nCreate ONE "Write for an Academic Discussion" prompt for the TOEFL Writing section, exactly in ETS format: a professor\'s post (60-90 words) that introduces a course topic (economics, sociology, education, environmental policy, business, psychology, urban planning, technology and society, etc.) and ends with a clear question asking students to take a position; then two student replies of 40-60 words each taking DIFFERENT positions, each with one reason. Use realistic first names for the students. Example style (do not copy): professor asks whether universities should require in-person attendance; Daniel argues for engagement and community; Priya argues online access matters for students who work.\nReply with JSON: {"course": "...", "professor": "...", "students": [{"name": "...", "post": "..."}, {"name": "...", "post": "..."}]}', $('adStatus')).catch(() => null);
+  if (!r || !r.students) return;
+  AD.p = r; $('adStage').hidden = false; $('adResult').hidden = true; $('adText').value = ''; $('adWc').textContent = '0 words'; $('adTimer').textContent = '10:00';
+  $('adPrompt').textContent = 'Your professor is teaching a class on ' + r.course + '. Write a post responding to the professor\'s question. In your response, express and support your opinion, and make a contribution to the discussion. An effective response contains at least 100 words.\n\nProfessor:\n' + r.professor + '\n\n' + r.students.map(s => s.name + ':\n' + s.post).join('\n\n');
+};
+$('adStart').onclick = () => { AD.timer.start(600); $('adText').focus(); };
+$('adText').oninput = () => $('adWc').textContent = wc($('adText').value) + ' words';
+$('adGrade').onclick = async () => {
+  AD.timer.stop(); const text = $('adText').value.trim(); if (wc(text) < 30) { setStatus($('adStatus'), '至少寫 30 個字再送出', true); return; }
+  const prompt = 'You are the ETS automated rater for the TOEFL iBT 2026 Writing task "Write for an Academic Discussion" (10 minutes, 100+ words). Score 0-5 strictly per the ETS rubric: 5 = clearly stated, well-supported position that adds relevant, elaborated ideas to the discussion (engaging with a classmate by name is a plus), consistently effective language with only rare typos; 4 = relevant and adequately elaborated, a few lexical or grammatical errors that do not obscure meaning; 3 = mostly relevant but partially developed or repetitive, noticeable errors, limited range; 2 = poorly developed, frequent errors that obscure meaning, may not clearly take a position; 1 = minimal or off topic; 0 = blank/copied.\n\nPROMPT:\nCourse: ' + AD.p.course + '\nProfessor: ' + AD.p.professor + '\n' + AD.p.students.map(s => s.name + ': ' + s.post).join('\n') + '\n\nRESPONSE (' + wc(text) + ' words):\n' + text + '\n\nReply with JSON: {"score": n, "position": n, "development": n, "language": n, "feedback_zh": "繁體中文批改：立場是否清楚、理由與例子是否具體、有沒有回應同學；列出 3-6 個具體錯誤（引用原句→改正→一句說明）；最後一句給下次的重點。", "corrected": "the same post corrected and improved to a band-5 level, keeping the writer\'s ideas, 110-140 words", "vocab": ["up to 6 useful academic words/phrases"]}';
+  setStatus($('adStatus'), 'AI 批改中（約 20–60 秒）…', false, true);
+  let r; try { r = await sample.json(prompt, { cache: false }); setStatus($('adStatus'), ''); } catch (e) { setStatus($('adStatus'), '批改失敗：' + (e.code || ''), true); return; }
+  if (!r || r.score == null) return;
+  AD.score = r.score;
+  scoreTiles($('adScores'), [{ k: '總分 /5', v: r.score }, { k: '立場', v: r.position }, { k: '論證', v: r.development }, { k: '語言', v: r.language }]);
+  $('adFeedback').innerHTML = '<div>' + esc(r.feedback_zh) + '</div><h4>修改版</h4><div class="daily">' + esc(r.corrected) + '</div>';
+  (r.vocab || []).forEach(w => addVocab(w, 'Discussion 批改'));
+  $('adResult').hidden = false; $('adResult').scrollIntoView({ behavior: 'smooth' });
+};
+$('adSave').onclick = () => { markDone('ad', AD.score); go('home'); };
+
+/* ===== COMPLETE THE WORDS ===== */
+const CW = { ps: [], i: 0, results: [], timer: null };
+CW.timer = makeTimer($('cwTimer'), () => setStatus($('cwStatus'), '時間到（正式考試每段約 3 分鐘）'));
+function makeBlanks(text) {
+  // keep first sentence intact; blank roughly every 3rd eligible word after that, up to 10
+  const m = text.match(/^[^.!?]+[.!?]["”]?\s*/); const first = m ? m[0] : ''; const rest = text.slice(first.length);
+  const parts = rest.split(/(\s+)/); const out = []; let count = 0, since = 0;
+  parts.forEach(p => { const core = p.match(/^([("“']*)([A-Za-z]+)([^A-Za-z]*)$/); const elig = core && core[2].length >= 4 && since >= 2 && count < 10; if (elig) { const w = core[2]; const keep = Math.max(1, Math.floor(w.length / 2)); out.push({ pre: core[1], shown: w.slice(0, keep), hidden: w.slice(keep), post: core[3], word: w }); count++; since = 0; } else { out.push(p); if (core) since++; } });
+  return { first, out, count };
+}
+$('cwGen').onclick = async () => {
+  const r = await askJSON(pre() + '\n\nWrite 6 short academic paragraphs for the TOEFL Reading task "Complete the Words". Each paragraph: 80-110 words, 4-6 sentences, on a different academic topic (life science, physical science, history, social science, arts, business/economics), written like a textbook or encyclopedia at the target level, with mostly common academic vocabulary of 4-9 letters (the test blanks such words). Avoid proper nouns after the first sentence, avoid hyphenated words and numbers.\nReply with JSON: {"passages": [{"title": "...", "text": "..."}, ... exactly 6 items]}', $('cwStatus')).catch(() => null);
+  if (!r || !Array.isArray(r.passages)) return;
+  CW.ps = r.passages.slice(0, 6).map(p => Object.assign({}, p, makeBlanks(p.text))); CW.i = 0; CW.results = [];
+  $('cwStage').hidden = false; $('cwSummary').hidden = true; cwShow(); CW.timer.start(1080);
+};
+function cwShow() {
+  const p = CW.ps[CW.i];
+  $('cwTabs').innerHTML = CW.ps.map((x, i) => '<button data-i="' + i + '" class="' + (i === CW.i ? 'on' : '') + '">段落 ' + (i + 1) + (CW.results[i] ? ' ✓' : '') + '</button>').join('');
+  $('cwTitle').textContent = p.title; $('cwScore').hidden = true; $('cwCheck').disabled = !!CW.results[CW.i];
+  let idx = 0;
+  $('cwPassage').innerHTML = esc(p.first) + p.out.map(x => typeof x === 'string' ? esc(x) : esc(x.pre) + '<span class="blank" data-i="' + (idx++) + '">' + esc(x.shown) + '<input maxlength="' + x.hidden.length + '" style="width:1ch" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="blank"><span class="rest">' + '_'.repeat(x.hidden.length) + '</span></span>' + esc(x.post)).join('');
+  if (CW.results[CW.i]) cwReveal();
+}
+$('cwTabs').onclick = e => { const b = e.target.closest('button'); if (b) { CW.i = +b.dataset.i; cwShow(); } };
+$('cwPassage').addEventListener('input', e => { if (e.target.tagName !== 'INPUT') return; const inp = e.target, rest = inp.nextElementSibling; const total = +inp.maxLength; inp.style.width = Math.max(1, inp.value.length) + 'ch'; if (rest) rest.textContent = '_'.repeat(Math.max(0, total - inp.value.length)); });
+$('cwPassage').addEventListener('keydown', e => { if (e.key === 'Enter' && e.target.tagName === 'INPUT') { const inputs = [...$('cwPassage').querySelectorAll('input')]; const k = inputs.indexOf(e.target); if (k < inputs.length - 1) inputs[k + 1].focus(); else $('cwCheck').click(); } });
+$('cwCheck').onclick = () => {
+  const p = CW.ps[CW.i]; const blanks = p.out.filter(x => typeof x !== 'string'); const inputs = [...$('cwPassage').querySelectorAll('.blank')];
+  let right = 0; const wrong = [];
+  inputs.forEach((el, i) => { const b = blanks[i]; const v = el.querySelector('input').value.trim().toLowerCase(); const ok = v === b.hidden.toLowerCase(); if (ok) right++; else { wrong.push(b.word); } el.classList.add(ok ? 'ok' : 'no'); if (!ok) el.insertAdjacentHTML('beforeend', '<span class="ans">' + esc(b.hidden) + '</span>'); el.querySelector('input').disabled = true; const rs = el.querySelector('.rest'); if (rs) rs.textContent = ''; });
+  CW.results[CW.i] = { right, total: blanks.length, wrong }; wrong.forEach(w => addVocab(w, 'Complete the Words'));
+  if (wrong.length) addError('拼字：字尾', '段落 ' + (CW.i + 1) + ' 拼錯：' + wrong.slice(0, 8).join('、'), true);
+  $('cwScore').hidden = false; $('cwScore').textContent = right + ' / ' + blanks.length; $('cwScore').className = 'pill ' + (right >= blanks.length * .8 ? 'good' : right >= blanks.length * .5 ? 'warn' : 'bad'); $('cwCheck').disabled = true;
+  $('cwTabs').innerHTML = CW.ps.map((x, i) => '<button data-i="' + i + '" class="' + (i === CW.i ? 'on' : '') + '">段落 ' + (i + 1) + (CW.results[i] ? ' ✓' : '') + '</button>').join('');
+  if (CW.results.filter(Boolean).length === CW.ps.length) { CW.timer.stop(); const R = CW.results.reduce((s, x) => s + x.right, 0), T = CW.results.reduce((s, x) => s + x.total, 0); CW.score = R + '/' + T; $('cwTotal').textContent = '三段合計 ' + CW.score; $('cwSummary').hidden = false; persist(); }
+};
+function cwReveal() { const p = CW.ps[CW.i]; const blanks = p.out.filter(x => typeof x !== 'string'); [...$('cwPassage').querySelectorAll('.blank')].forEach((el, i) => { const inp = el.querySelector('input'); inp.value = blanks[i].hidden; inp.disabled = true; inp.style.width = blanks[i].hidden.length + 'ch'; const rs = el.querySelector('.rest'); if (rs) rs.textContent = ''; el.classList.add(CW.results[CW.i].wrong.includes(blanks[i].word) ? 'no' : 'ok'); }); $('cwScore').hidden = false; $('cwScore').textContent = CW.results[CW.i].right + ' / ' + blanks.length; }
+$('cwSave').onclick = () => { markDone('cw', CW.score); go('home'); };
+
+/* ===== READING ===== */
+const RD = { set: null, timer: null };
+RD.timer = makeTimer($('rdTimer'), () => setStatus($('rdStatus'), '時間到'));
+$('rdGen').onclick = async () => {
+  const kinds = ['an email from a university office', 'a text-message or chat thread between two friends or coworkers (label each message with the sender name)', 'a notice posted in an apartment building', 'a restaurant menu with a short note about specials', 'a job or volunteer posting', 'an invoice or receipt with a note', 'an event poster', 'a memo from a manager to staff', 'a product review'];
+  const kind = kinds[Math.floor(Math.random() * kinds.length)];
+  const r = await askJSON(pre() + '\n\nCreate ONE reading set with two parts.\nPart 1, "Read in Daily Life": ' + kind + ', 90-150 words, realistic layout in plain text (line breaks allowed), followed by 3 four-option multiple-choice questions testing purpose, specific detail, and inference/what the reader should do.\nPart 2, "Read an Academic Passage": a 190-220 word passage on an academic topic (history, arts, business, life/physical/social science) with 5 four-option multiple-choice questions in this order: main idea, detail, vocabulary in context ("The word X in the passage is closest in meaning to"), inference, and a second detail or purpose question. Options must be plausible and similar in length; exactly one correct.\nReply with JSON: {"daily": {"type": "...", "text": "...", "questions": [{"question": "...", "options": ["...", "...", "...", "..."], "answer": 0-3, "explanation": "一句繁體中文解釋"}]}, "academic": {"title": "...", "passage": "...", "questions": [5 items same shape]}}', $('rdStatus')).catch(() => null);
+  if (!r || !r.daily || !r.academic) return;
+  RD.set = r; $('rdStage').hidden = false; $('rdScore').hidden = true; $('rdSave').hidden = true; $('rdCheck').disabled = false;
+  $('rdType').textContent = r.daily.type || ''; $('rdDaily').textContent = r.daily.text; renderMCQ($('rdDailyQ'), r.daily.questions);
+  $('rdAcTitle').textContent = r.academic.title; $('rdAc').textContent = r.academic.passage; renderMCQ($('rdAcQ'), r.academic.questions);
+  delete $('rdDailyQ').dataset.locked; delete $('rdAcQ').dataset.locked;
+  RD.timer.start($('rdRouter') && $('rdRouter').checked ? 540 : 600);
+};
+$('rdCheck').onclick = () => { RD.timer.stop(); const a = gradeMCQ($('rdDailyQ'), RD.set.daily.questions), b = gradeMCQ($('rdAcQ'), RD.set.academic.questions); const T = RD.set.daily.questions.length + RD.set.academic.questions.length; RD.score = (a + b) + '/' + T; $('rdScore').hidden = false; $('rdScore').textContent = '答對 ' + RD.score + '　用時 ' + Math.round(RD.timer.elapsed() / 60) + ' 分'; $('rdScore').className = 'pill ' + ((a + b) / T >= .8 ? 'good' : 'warn'); $('rdSave').hidden = false; $('rdCheck').disabled = true; };
+$('rdSave').onclick = () => { markDone('rd', RD.score); go('home'); };
+
+/* ===== LISTENING ===== */
+const LS = { set: null, played: {}, accents: {} };
+function accentFor(key) { const sel = $('lsAccent').value; if (sel !== 'mix') return sel; if (!LS.accents[key]) { const pool = ['en-US', 'en-US', 'en-GB', 'en-AU']; LS.accents[key] = pool[Math.floor(Math.random() * pool.length)]; } return LS.accents[key]; }
+$('lsGen').onclick = async () => {
+  const r = await askJSON(pre() + '\n\nCreate ONE Listening practice set with four parts, written to be read aloud by text-to-speech.\n1. "response": one spoken line (10-20 words) someone might say in a campus, workplace, or daily-life situation, plus 4 written reply options of similar length; exactly one is the natural response (the others are on-topic distractors that misread the situation). Example style (do not copy): "I\'m so sorry I kept you waiting; the campus shuttle was running behind schedule." -> "No problem, I just got here myself."\n2. "conversation": a campus or workplace dialogue between speaker A and speaker B, 8-10 turns, 90-130 words total, with a small problem or decision; then 2 four-option questions (purpose/gist and detail or what the speaker will do next).\n3. "announcement": a single-speaker announcement 60-85 words (transit, store, campus, workplace, event); then 2 four-option questions (purpose, detail).\n4. "talk": a short academic lecture excerpt 170-230 words on a specific academic topic with one named concept or example; then 4 four-option questions (main idea, detail, why the speaker mentions X, inference).\nAll questions: exactly one correct option; options plausible and similar in length; "answer" is the 0-based index.\nReply with JSON: {"response": {"line": "...", "options": ["...", "...", "...", "..."], "answer": n, "explanation": "一句繁體中文"}, "conversation": {"setting": "...", "turns": [{"speaker": "A", "text": "..."}, ...], "questions": [{"question": "...", "options": [...], "answer": n, "explanation": "..."}, ...]}, "announcement": {"text": "...", "questions": [2 items]}, "talk": {"title": "...", "text": "...", "questions": [4 items]}}', $('lsStatus')).catch(() => null);
+  if (!r || !r.talk) return;
+  LS.set = r; LS.played = {}; LS.accents = {};
+  const st = $('lsStage'); st.hidden = false; st.innerHTML = '';
+  const parts = [['response', 'Listen and Choose a Response', '聽一句話，選最自然的回應'], ['conversation', 'Listen to a Conversation', r.conversation.setting || ''], ['announcement', 'Listen to an Announcement', ''], ['talk', 'Listen to an Academic Talk', r.talk.title || '']];
+  parts.forEach(([k, title, sub]) => {
+    const d = document.createElement('div'); d.className = 'stack'; d.id = 'ls-' + k;
+    d.innerHTML = '<div><span class="pill acc">' + esc(title) + '</span> <span class="small muted">' + esc(sub) + '</span></div><div class="audiobar"><div class="speaker">🔊</div><button class="btn sm" data-play="' + k + '">▶ 播放</button><span class="small muted" data-st="' + k + '">只播一次</span></div><div class="mcq" data-q="' + k + '" hidden></div><div class="daily small" data-tr="' + k + '" hidden></div>';
+    st.appendChild(d);
+    const qs = k === 'response' ? [{ question: 'What would the other person most likely say?', options: r.response.options, answer: r.response.answer, explanation: r.response.explanation }] : r[k].questions;
+    renderMCQ(d.querySelector('[data-q]'), qs); d.querySelector('[data-tr]').textContent = k === 'conversation' ? r.conversation.turns.map(t => t.speaker + ': ' + t.text).join('\n') : (k === 'response' ? r.response.line : r[k].text);
+  });
+  $('lsFoot').hidden = false; $('lsScore').hidden = true; $('lsSave').hidden = true; $('lsShow').hidden = true; $('lsCheck').disabled = false;
+  st.onclick = async e => {
+    const b = e.target.closest('[data-play]'); if (!b) return; const k = b.dataset.play;
+    if (LS.played[k] && !$('lsAllowReplay').checked) return;
+    LS.played[k] = true; b.disabled = true; const stEl = st.querySelector('[data-st="' + k + '"]'); stEl.textContent = '播放中…';
+    const acc = accentFor(k);
+    if (k === 'conversation') await speakDialogue(r.conversation.turns, acc); else await speak(k === 'response' ? r.response.line : r[k].text, { lang: acc, rate: k === 'talk' ? 0.98 : 0.95 });
+    stEl.textContent = '已播放（' + acc + '）'; st.querySelector('[data-q="' + k + '"]').hidden = false; if ($('lsAllowReplay').checked) b.disabled = false;
+  };
+};
+$('lsCheck').onclick = () => {
+  const r = LS.set; let right = 0, T = 0;
+  [['response', [{ answer: r.response.answer, explanation: r.response.explanation }]], ['conversation', r.conversation.questions], ['announcement', r.announcement.questions], ['talk', r.talk.questions]].forEach(([k, qs]) => { const el = $('lsStage').querySelector('[data-q="' + k + '"]'); el.hidden = false; right += gradeMCQ(el, qs); T += qs.length; });
+  LS.score = right + '/' + T; $('lsScore').hidden = false; $('lsScore').textContent = '答對 ' + LS.score; $('lsScore').className = 'pill ' + (right / T >= .8 ? 'good' : 'warn'); $('lsSave').hidden = false; $('lsShow').hidden = false; $('lsCheck').disabled = true;
+};
+$('lsShow').onclick = () => $('lsStage').querySelectorAll('[data-tr]').forEach(x => x.hidden = false);
+$('lsSave').onclick = () => { markDone('ls', LS.score); go('home'); };
+
+/* ===== home: generate both speaking sets and open mic mode ===== */
+$('homeMicBtn').onclick = async () => {
+  const st = $('homeMicStatus');
+  if (!sample) { setStatus(st, 'AI 未連線，無法出題', true); return; }
+  $('homeMicBtn').disabled = true;
+  try {
+    setStatus(st, '產生 Listen and Repeat…', false, true);
+    await lrGenerate();
+    setStatus(st, '產生 Interview…', false, true);
+    await ivGenerate();
+    if (!LR.set || !IV.set) throw new Error('gen');
+    $('homeSetBox').hidden = false;
+    $('homeSetCode').value = JSON.stringify({ lr: LR.set, iv: IV.set, srLang: S.srLang, level: S.level });
+    setStatus(st, '兩組題目已產生。複製題組代碼，到麥克風版頁面貼上。');
+  } catch (e) { setStatus(st, '出題失敗，請再按一次', true); }
+  $('homeMicBtn').disabled = false;
+};
+$('homeSetCopy').onclick = () => copyText($('homeSetCode').value, $('homeSetCopy'));
+$('homeSetOpen').onclick = () => { window.open(micModeUrl({ lr: LR.set, iv: IV.set }), '_blank'); };
+function loadSetCode(raw, kind) {
+  let d; try { d = JSON.parse(raw.trim()); } catch (e) { alert('題組代碼格式不對，請整段複製再貼'); return; }
+  if (d.srLang) S.srLang = d.srLang; if (d.level) S.level = d.level;
+  if (d.iv) ivLoad(d.iv, false); if (d.lr) lrLoad(d.lr);
+  if (d.lr && d.iv) $('lrMicBar').innerHTML = '<b>麥克風模式。</b>已載入 Listen and Repeat 與 Interview，左側切換。兩項各有自己的結果代碼，做完複製回 claude.ai 的頁面貼上。';
+  go(kind === 'iv' && d.iv ? 'iv' : d.lr ? 'lr' : 'iv');
+}
+$('lrSetGo').onclick = () => loadSetCode($('lrSetPaste').value, 'lr');
+$('ivSetGo').onclick = () => loadSetCode($('ivSetPaste').value, 'iv');
+
+
+/* ===== LISTEN AND CHOOSE A RESPONSE (block B) ===== */
+const CR = { items: [], i: 0, right: 0, wrong: [], answered: false };
+const CR_CTX = [
+  'a university campus (advising, dorms, labs, the library, registration, a study group)',
+  'a workplace (a colleague, a manager, a meeting that ran late, a shared printer, a deadline)',
+  'daily errands (a cafe, a pharmacy, a bank, a repair shop, a delivery, a landlord)',
+  'travel and transit (an airport, a bus that is late, a hotel front desk, a rental counter)'
+];
+$('crGen').onclick = () => crGenerate();
+async function crGenerate() {
+  const st = $('crStatus'), bar = $('crLoadBar');
+  if (!sample) { setStatus(st, 'AI 未連線，請在 claude.ai 裡開啟這個頁面', true); return; }
+  $('crGen').disabled = true; bar.hidden = false; bar.firstElementChild.style.width = '5%';
+  setStatus(st, '產生 40 題中（約 40–90 秒）…', false, true);
+  let done = 0;
+  const jobs = CR_CTX.map(ctx => sample.json(pre()
+    + '\n\nWrite 10 items for the TOEFL Listening task "Listen and Choose a Response". Setting for all 10: ' + ctx + '.'
+    + '\nEach item: one natural spoken line of 10-22 words that one person says to another, then 4 written reply options of similar length. Exactly one option is what a real person would actually say back. The three distractors must be ON TOPIC and grammatical but pragmatically wrong: they answer a question that was not asked, respond to the literal words instead of the intent, give information the speaker already has, or use the wrong register for the relationship. Vary the speech act across the 10 items: apologising, complaining, offering help, refusing politely, asking a favour, giving bad news, making small talk, correcting a misunderstanding, confirming an arrangement, hinting rather than asking directly.'
+    + '\nExample style, do not copy: "I\'m so sorry I kept you waiting; the campus shuttle was running behind schedule." -> "No problem, I just got here myself."'
+    + '\nReply with JSON: {"items": [{"line": "...", "options": ["...","...","...","..."], "answer": 0-3, "explanation": "一句繁體中文，說明為什麼正確選項在語用上自然，以及最誘人的錯誤選項錯在哪"}, ... exactly 10 items]}'
+    + '\n\nSeed: ' + Date.now() + Math.random().toString(36).slice(2, 7), { cache: false })
+    .then(r => { done++; bar.firstElementChild.style.width = Math.round(done / 4 * 100) + '%'; return r; }));
+  const res = await Promise.allSettled(jobs);
+  const items = [];
+  res.forEach(x => { if (x.status === 'fulfilled' && x.value && Array.isArray(x.value.items)) items.push(...x.value.items.filter(it => it && it.line && Array.isArray(it.options) && it.options.length === 4)); });
+  $('crGen').disabled = false; bar.hidden = true;
+  if (items.length < 10) { setStatus(st, '出題失敗，請再按一次', true); return; }
+  setStatus(st, items.length < 40 ? '產生了 ' + items.length + ' 題（有一批沒回來，不影響練習）' : '');
+  CR.items = shuffle(items); CR.i = 0; CR.right = 0; CR.wrong = []; CR.accents = {};
+  $('crStage').hidden = false; $('crSummary').hidden = true;
+  crShow();
+}
+function crAccent() { const sel = $('crAccent').value; if (sel !== 'mix') return sel; const pool = ['en-US', 'en-US', 'en-US', 'en-GB', 'en-AU']; return pool[Math.floor(Math.random() * pool.length)]; }
+function crShow() {
+  const it = CR.items[CR.i]; CR.answered = false; CR.played = false;
+  $('crCur').textContent = '第 ' + (CR.i + 1) + ' 題 / ' + CR.items.length;
+  $('crLive').textContent = '答對 ' + CR.right + '　答錯 ' + CR.wrong.length;
+  $('crPlay').disabled = false; $('crPlay').textContent = '▶ 播放';
+  $('crPlayed').textContent = $('crReplay').checked ? '可重播' : '只播一次';
+  $('crQ').hidden = true; $('crFb').innerHTML = '';
+  renderMCQ($('crQ'), [{ question: 'What would the other person most likely say?', options: it.options }]);
+  delete $('crQ').dataset.locked;
+  $('crQ').onclick = e => { const o = e.target.closest('.opt'); if (o && !CR.answered) crAnswer(+o.dataset.o); };
+}
+$('crPlay').onclick = async () => {
+  const it = CR.items[CR.i];
+  if (CR.played && !$('crReplay').checked) return;
+  CR.played = true; $('crPlay').disabled = true; $('crPlayed').textContent = '播放中…';
+  const acc = crAccent();
+  await speak(it.line, { lang: acc });
+  $('crPlayed').textContent = '已播放（' + acc + '）';
+  $('crQ').hidden = false;
+  if ($('crReplay').checked) $('crPlay').disabled = false;
+};
+function crAnswer(pick) {
+  const it = CR.items[CR.i]; CR.answered = true;
+  const ans = typeof it.answer === 'number' ? it.answer : 'ABCD'.indexOf(String(it.answer).trim().toUpperCase()[0]);
+  $('crQ').dataset.locked = '1';
+  $('crQ').querySelectorAll('.opt').forEach(o => { const oi = +o.dataset.o; if (oi === ans) o.classList.add('right'); else if (oi === pick) o.classList.add('wrong'); });
+  const ok = pick === ans; if (ok) CR.right++; else CR.wrong.push(it);
+  $('crLive').textContent = '答對 ' + CR.right + '　答錯 ' + CR.wrong.length;
+  $('crFb').innerHTML = '<div class="note" style="margin-top:10px">' + (ok ? '<span class="pill good">正確</span>' : '<span class="pill bad">錯</span>')
+    + '<div style="margin-top:8px"><b>原句.</b> ' + esc(it.line) + '</div>'
+    + (it.explanation ? '<div style="margin-top:4px">' + esc(it.explanation) + '</div>' : '')
+    + '</div><div class="row" style="margin-top:8px"><button class="btn sm" id="crNext">' + (CR.i >= CR.items.length - 1 ? '看結果' : '下一題') + '</button>'
+    + '<button class="btn ghost sm" id="crEcho">再聽一次原句</button></div>';
+  $('crNext').onclick = () => { if (CR.i >= CR.items.length - 1) crFinish(); else { CR.i++; crShow(); } };
+  $('crEcho').onclick = () => speak(it.line, { lang: 'en-US' });
+}
+function crFinish() {
+  $('crStage').hidden = true; $('crSummary').hidden = false;
+  CR.score = CR.right + '/' + CR.items.length;
+  const pct = Math.round(CR.right / CR.items.length * 100);
+  $('crTotal').textContent = '答對 ' + CR.score + '（' + pct + '%）';
+  $('crWrong').innerHTML = CR.wrong.length ? CR.wrong.map((it, i) =>
+    '<div class="sent"><span class="n">' + (i + 1) + '</span><div><div>' + esc(it.line) + '</div><div class="small muted" style="margin-top:2px">正解：' + esc(it.options[typeof it.answer === 'number' ? it.answer : 0]) + '</div></div><button class="btn ghost sm" data-echo="' + i + '">▶</button></div>').join('')
+    : '<p class="small muted">全對，今天不用跟讀。</p>';
+  $('crWrong').onclick = e => { const b = e.target.closest('[data-echo]'); if (b) speak(CR.wrong[+b.dataset.echo].line, { lang: 'en-US' }); };
+  if (CR.wrong.length) addError('口語回應語用', CR.wrong.length + ' 題選到語用不自然的選項', true);
+}
+$('crSave').onclick = () => { markDone('cr', CR.score); go('home'); };
+$('crAgain').onclick = () => crGenerate();
+
+/* ===== ERROR LOG (block F) ===== */
+const ERR_CATS = ['拼字：字尾', '拼字：整體', '搭配詞用錯', '生活文本用語', '口語回應語用', '聽力：細節漏聽', '聽力：主旨抓錯', '文法：冠詞', '文法：時態', '文法：介系詞', '字彙不懂', '速度不夠', '粗心'];
+function addError(cat, note, silent) {
+  S.errors.unshift({ id: 'e' + Date.now() + Math.random().toString(36).slice(2, 5), d: todayKey(), cat: cat, note: note || '' });
+  if (S.errors.length > 600) S.errors.length = 600;
+  persist(); renderErr();
+  if (!silent) setStatus($('errStatus') || null, '已新增');
+}
+function renderErr() {
+  const sel = $('errCat');
+  if (sel && !sel.options.length) sel.innerHTML = ERR_CATS.map(c => '<option>' + esc(c) + '</option>').join('');
+  const q = $('errQuick');
+  if (q && !q.children.length) { q.innerHTML = ERR_CATS.map(c => '<button data-c="' + esc(c) + '">' + esc(c) + '</button>').join(''); q.onclick = e => { const b = e.target.closest('button'); if (b) addError(b.dataset.c, ''); }; }
+  const cutoff = new Date(Date.now() - 7 * 86400000).toISOString().slice(0, 10);
+  const recent = S.errors.filter(x => x.d >= cutoff);
+  const counts = {}; recent.forEach(x => counts[x.cat] = (counts[x.cat] || 0) + 1);
+  const rows = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+  const max = rows.length ? counts[rows[0]] : 0;
+  $('errEmpty').hidden = rows.length > 0;
+  $('errChart').innerHTML = rows.map((c, i) =>
+    '<div style="display:grid;grid-template-columns:minmax(96px,132px) 1fr 36px;gap:10px;align-items:center;padding:4px 0">'
+    + '<div class="small' + (i === 0 ? '" style="font-weight:600' : '') + '">' + esc(c) + '</div>'
+    + '<div class="bar"><i style="width:' + Math.round(counts[c] / max * 100) + '%;' + (i === 0 ? '' : 'opacity:.45') + '"></i></div>'
+    + '<div class="mono small" style="text-align:right">' + counts[c] + '</div></div>').join('');
+  const top = $('errTop');
+  if (rows.length) { top.hidden = false; top.className = 'pill bad'; top.textContent = '本週最大破口：' + rows[0]; } else top.hidden = true;
+  const tb = $('errTable').querySelector('tbody');
+  tb.innerHTML = S.errors.slice(0, 120).map(x => '<tr><td class="mono small">' + esc(x.d) + '</td><td>' + esc(x.cat) + '</td><td class="small">' + esc(x.note) + '</td><td><button class="btn ghost sm" data-del="' + esc(x.id) + '">刪</button></td></tr>').join('')
+    || '<tr><td colspan="4" class="muted small">還沒有紀錄</td></tr>';
+}
+$('errAdd').onclick = () => { addError($('errCat').value, $('errNote').value.trim()); $('errNote').value = ''; };
+$('errNote').addEventListener('keydown', e => { if (e.key === 'Enter') $('errAdd').click(); });
+$('errTable').onclick = e => { const b = e.target.closest('[data-del]'); if (b) { S.errors = S.errors.filter(x => x.id !== b.dataset.del); persist(); renderErr(); } };
+$('errDone').onclick = () => { markDone('err', S.errors.filter(x => x.d === todayKey()).length + ' 筆'); go('home'); };
+
+/* ===== retired: separate mic tab flow (kept out of the UI) ===== */
+['lrMicOpen', 'lrPasteBtn', 'lrPasteBox', 'lrCodeBox', 'ivMicOpen', 'ivPasteBtn', 'ivPasteBox', 'ivCodeBox', 'homeMicRow', 'homeMicHint'].forEach(id => { const el = $(id); if (el) el.hidden = true; });
+
+/* ===== boot ===== */
+loadLocal();
+renderAll();
+if (MIC_MODE) {
+  S.srLang = (MIC_PAYLOAD && MIC_PAYLOAD.srLang) || S.srLang; S.level = (MIC_PAYLOAD && MIC_PAYLOAD.level) || S.level;
+  $('aiPill').textContent = '麥克風版（無 AI，出題與評分在 claude.ai 頁面）'; $('aiPill').className = 'pill warn';
+  document.querySelectorAll('#nav button').forEach(b => { if (!['lr', 'iv', 'set'].includes(b.dataset.p)) b.hidden = true; });
+  const PL = MIC_PAYLOAD || {};
+  const lrSet = PL.lr || (PL.kind === 'lr' ? PL.set : null), ivSet = PL.iv || (PL.kind === 'iv' ? PL.set : null);
+  $('lrSetBox').hidden = false; $('ivSetBox').hidden = false;
+  if (ivSet) ivLoad(ivSet, false);
+  if (lrSet) lrLoad(lrSet);
+  go(lrSet || !ivSet ? 'lr' : 'iv');
+  if (lrSet && ivSet) { $('lrMicBar').innerHTML += '<br>這個分頁同時載入了 Listen and Repeat 和 Interview，左側切換即可，兩邊各有自己的結果代碼。'; }
+  ['lrGen','lrLevel','ivGen','ivTopic'].forEach(id => $(id).hidden = true);
+  micBanner('lr'); micBanner('iv');
+} else {
+  try { const p = localStorage.getItem('toefl60.page'); if (p && $('p-' + p)) go(p); } catch (e) {}
+  initCaps();
+}
+</script>
+
+</body>
+</html>

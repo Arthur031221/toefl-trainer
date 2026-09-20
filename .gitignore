@@ -1,0 +1,13 @@
+# 大型檔案 / 安裝檔
+*.dmg
+*.zip
+
+# macOS
+.DS_Store
+
+# 編輯器
+.vscode/
+.idea/
+
+# 相依套件
+node_modules/
